@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import DetailLeague from "./pages/DetailLeague/DetailLeague";
-import DetailTeam from "./pages/DetailTeams/DetailTeams";
+import DetailTeam from "./pages/DetailTeams/DetailTeam";
 import { useState } from "react";
 import {
   LoadingContext,
