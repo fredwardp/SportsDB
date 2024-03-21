@@ -1,35 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import DetailLeague from "./pages/DetailLeague/DetailLeague";
+import DetailTeam from "./pages/DetailTeams/DetailTeams";
+import { useState } from "react";
+import {
+  LoadingContext,
+  AllLeaguesContext,
+  AllPlayersContext,
+  AllTeamsContext,
+} from "./context/context";
+import LoadingScreen from "./componenten/LoadingScreen/LoadingScreen";
+import DetailPlayer from "./pages/DetailPlayer/DetailPlayer";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [loading, setLoading] = useState(false);
+  const [leagues, setLeagues] = useState();
+  const [teams, setTeams] = useState();
+  const [players, setPlayers] = useState();
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <AllPlayersContext.Provider value={{ players, setPlayers }}>
+      <AllTeamsContext.Provider value={{ teams, setTeams }}>
+        <AllLeaguesContext.Provider value={{ leagues, setLeagues }}>
+          <LoadingContext.Provider value={{ loading, setLoading }}>
+            {loading ? (
+              <BrowserRouter>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/detailleague/:id" element={<DetailLeague />} />
+                  <Route path="/detailteams/:id" element={<DetailTeam />} />
+                  <Route path="/detailplayer/:id" element={<DetailPlayer />} />
+                </Routes>
+              </BrowserRouter>
+            ) : (
+              <LoadingScreen />
+            )}
+          </LoadingContext.Provider>
+        </AllLeaguesContext.Provider>
+      </AllTeamsContext.Provider>
+    </AllPlayersContext.Provider>
+  );
+};
 
-export default App
+export default App;
