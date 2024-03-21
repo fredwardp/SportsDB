@@ -11,6 +11,7 @@ import {
 } from "./context/context";
 import LoadingScreen from "./componenten/LoadingScreen/LoadingScreen";
 import DetailPlayer from "./pages/DetailPlayer/DetailPlayer";
+import Nav from "./componenten/Nav/Nav";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -25,6 +26,7 @@ const App = () => {
           <LoadingContext.Provider value={{ loading, setLoading }}>
             {loading ? (
               <BrowserRouter>
+                <Nav />
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/detailleague/:id" element={<DetailLeague />} />
