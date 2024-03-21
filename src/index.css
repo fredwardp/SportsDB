@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: var(--white);
 }
 
 img,
@@ -26,4 +27,5 @@ video {
 
 .container {
   padding-inline: 3.35vw;
+  background-color: var(--black);
 }

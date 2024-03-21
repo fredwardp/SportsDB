@@ -5,7 +5,7 @@ useContext;
 const Home = () => {
   return (
     <>
-      <section className="container">
+      <section className="container filter_section">
         <h1>hallo</h1>
       </section>
     </>
