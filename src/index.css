@@ -23,3 +23,7 @@ video {
   --red: #e83539;
   --white: #ffffff;
 }
+
+.container {
+  padding-inline: 3.35vw;
+}
