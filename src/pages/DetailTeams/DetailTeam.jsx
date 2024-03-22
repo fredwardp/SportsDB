@@ -11,8 +11,11 @@ const DetailTeam = () => {
   const [teamDetail, setTeamDetail] = useState({});
 
   useEffect(() => {
+    console.log(teams)
     if (Array.isArray(teams) && teams.length > 0) {
+      console.log("test");
         const selectedTeam = teams.find(team => team.idTeam === id);
+        console.log("test2");
         if (selectedTeam) {
             setTeamDetail(selectedTeam);
             console.log("Team Detail:", selectedTeam);
@@ -45,11 +48,11 @@ const DetailTeam = () => {
           <p className="detail-text">COMPETITION</p>
         </div>
         <div>
-          <p className="detail-comp-text">{teamDetail.strLeague}</p>
-          <p className="detail-comp-text">{teamDetail.strLeague2}</p>
-          <p className="detail-comp-text">{teamDetail.strLeague3}</p>
-          <p className="detail-comp-text">{teamDetail.strLeague4}</p>
-          <p className="detail-comp-text">{teamDetail.strLeague5}</p>
+          <p className="detail-comp-text">{teamDetail.strLeague}</p> <br />
+          <p className="detail-comp-text">{teamDetail.strLeague2}</p> <br />
+          <p className="detail-comp-text">{teamDetail.strLeague3}</p> <br />
+          <p className="detail-comp-text">{teamDetail.strLeague4}</p> <br />
+          <p className="detail-comp-text">{teamDetail.strLeague5}</p> <br />
         </div>
       </div>
       <div className="desc">
