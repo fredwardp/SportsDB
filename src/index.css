@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../public/fonts/Roboto-Black.ttf);
+}
 * {
   margin: 0;
   padding: 0;

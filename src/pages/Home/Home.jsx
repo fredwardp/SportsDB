@@ -17,9 +17,8 @@ const Home = () => {
   return (
     <>
       <Header />
-      <Filter />
+
       <section className="container filter_section">
-        <Link to="/detailleague/English Premier League">Test</Link>
         <div className="filter_spcbtw">
           <div className="filter_popup_wrapper">
             {countryPopUp ? <HomeFilterPopUp func="c" /> : ""}
@@ -34,7 +33,9 @@ const Home = () => {
             <HomeFilterDropDown func="s" data={sports} name="All Sports" />
           </div>
         </div>
-        <div className="container_output_wrapper"></div>
+        <div className="container_output_wrapper">
+          <Filter />
+        </div>
       </section>
     </>
   );

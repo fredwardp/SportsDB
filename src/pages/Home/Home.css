@@ -3,7 +3,7 @@
 }
 
 .filter_spcbtw {
-  padding-bottom: 96px;
+  padding-bottom: 250px;
   display: flex;
   justify-content: space-between;
 }
@@ -53,6 +53,12 @@
   box-sizing: content-box;
   max-height: 200px;
   overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.dropdown_popup::-webkit-scrollbar {
+  display: none;
 }
 
 .dropdown_border {
