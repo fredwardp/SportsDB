@@ -5,6 +5,7 @@ import sports from "../../assets/Data/AllSports";
 import HomeFilterDropDown from "../../componenten/HomeFilterDropDown/HomeFilterDropDown";
 import { SportPopUpContext, CountryPopUpContext } from "../../context/context";
 import HomeFilterPopUp from "../../componenten/HomeFilterPopUp/HomeFilterPopUp";
+import Header from "../../componenten/Header/Header";
 
 const Home = () => {
   const { countryPopUp, setCountryPopUp } = useContext(CountryPopUpContext);
@@ -13,6 +14,7 @@ const Home = () => {
   console.log(countryPopUp);
   return (
     <>
+      <Header />
       <section className="container filter_section">
         <div className="filter_spcbtw">
           <div className="filter_popup_wrapper">
