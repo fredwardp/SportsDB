@@ -7,7 +7,7 @@ const Header = () => {
         <img src="" alt="" />
       </div>
       <div>
-        <p>EENGLISH PREMIER LEAGUE</p>
+        <p>ENGLISH PREMIER LEAGUE</p>
       </div>
     </section>
   );
