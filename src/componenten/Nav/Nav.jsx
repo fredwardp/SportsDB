@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { AllPlayersContext, SearchValueContext } from "../../context/context";
 import { useContext } from "react";
 import FetchData from "../FetchData/FetchData";
-import { useContext } from "react";
 import DarkMode from "../DarkMode/DarkMode";
 
 const Nav = () => {
