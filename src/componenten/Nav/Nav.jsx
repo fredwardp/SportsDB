@@ -3,6 +3,7 @@ import React from "react";
 import { AllPlayersContext } from "../../context/context";
 import FetchData from "../FetchData/FetchData";
 import { useContext } from "react";
+import DarkMode from "../DarkMode/DarkMode";
 
 const Nav = () => {
   const { players, setPlayers } = useContext(AllPlayersContext);
@@ -44,6 +45,7 @@ const Nav = () => {
             </svg>
           </button>
           <input type="text" className="input-search" placeholder="Suche..." />
+          <DarkMode />
         </div>
       </nav>
     </section>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./DarkMode.css";
-import darkMode from "/darkmode.svg";
+import darkMode from "/public/img/darkmode.svg";
 
 const DarkMode = () => {
   const [toggle, setToggle] = useState(false);
@@ -19,7 +19,7 @@ const DarkMode = () => {
   };
 
   return (
-    <div>
+    <div className="darkmode_div">
       <img src={darkMode} onClick={darkLightSwitch} alt="" />
     </div>
   );

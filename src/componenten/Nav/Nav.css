@@ -12,12 +12,14 @@
   justify-content: center;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
 }
 .search-box {
   width: fit-content;
   height: fit-content;
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 .input-search {
   height: 50px;
@@ -49,7 +51,7 @@
   cursor: pointer;
   border-radius: 50%;
   position: absolute;
-  right: 0px;
+  right: 30px;
   background-color: transparent;
   pointer-events: painted;
 }
