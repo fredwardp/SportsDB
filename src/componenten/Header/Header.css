@@ -1,0 +1,19 @@
+.header-wrapper {
+  padding-top: 177px;
+  padding-bottom: 100px;
+}
+.header-img {
+  width: 80%;
+}
+.header-text {
+  font-size: 136px;
+  width: 12ch;
+  text-align: right;
+  font-family: "Montserrat";
+  font-weight: 700;
+  position: absolute;
+  top: 350px;
+  right: 3.35vw;
+  color: var(--red);
+  line-height: 168px;
+}
