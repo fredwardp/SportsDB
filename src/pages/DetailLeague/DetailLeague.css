@@ -1,0 +1,59 @@
+.detailLeagueHeader {
+    display: flex;
+    font-family: "Montserrat";
+    padding-top: 100px;
+
+    position: relative;
+    min-height: 100svh;
+}
+
+.detailLeagueHeaderImage {
+    width: 650px;
+    height: 780px;
+    padding-left: 10vw;
+    object-fit: cover;
+    filter: grayscale(1);
+}
+
+.detailLeagueHeaderImage:hover {
+    filter: grayscale(0);
+}
+
+.detailLeagueHeadingContainer {
+    position: absolute;
+    z-index: 2;
+    right: 50px;
+    top: 150px;
+    color: var(--red);
+    font-size: 5rem;
+    text-align: right;
+}
+
+.detailLeagueHeading {
+    color: var(--red);
+    text-transform: uppercase;
+}
+
+.detailLeagueInnerOutput {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.detailLeagueOutput p {
+    display: inline-block;
+}
+
+.detailLeaguePTag1 {
+    font-size: 2rem;
+}
+
+.detailLeaguePTag1:hover {
+    transition: 300ms;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.detailLeagueLink {
+    text-decoration: none;
+}
