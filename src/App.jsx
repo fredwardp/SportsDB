@@ -8,6 +8,7 @@ import {
   AllLeaguesContext,
   AllPlayersContext,
   AllTeamsContext,
+  SearchValueContext,
 } from "./context/context";
 import LoadingScreen from "./componenten/LoadingScreen/LoadingScreen";
 import DetailPlayer from "./pages/DetailPlayer/DetailPlayer";
@@ -18,29 +19,38 @@ const App = () => {
   const [leagues, setLeagues] = useState();
   const [teams, setTeams] = useState();
   const [players, setPlayers] = useState();
+  const [searchValue, setSearchValue] = useState();
 
   return (
-    <AllPlayersContext.Provider value={{ players, setPlayers }}>
-      <AllTeamsContext.Provider value={{ teams, setTeams }}>
-        <AllLeaguesContext.Provider value={{ leagues, setLeagues }}>
-          <LoadingContext.Provider value={{ loading, setLoading }}>
-            {loading ? (
-              <BrowserRouter>
-                <Nav />
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/detailleague/:id" element={<DetailLeague />} />
-                  <Route path="/detailteams/:id" element={<DetailTeam />} />
-                  <Route path="/detailplayer/:id" element={<DetailPlayer />} />
-                </Routes>
-              </BrowserRouter>
-            ) : (
-              <LoadingScreen />
-            )}
-          </LoadingContext.Provider>
-        </AllLeaguesContext.Provider>
-      </AllTeamsContext.Provider>
-    </AllPlayersContext.Provider>
+    <SearchValueContext.Provider value={{ searchValue, setSearchValue }}>
+      <AllPlayersContext.Provider value={{ players, setPlayers }}>
+        <AllTeamsContext.Provider value={{ teams, setTeams }}>
+          <AllLeaguesContext.Provider value={{ leagues, setLeagues }}>
+            <LoadingContext.Provider value={{ loading, setLoading }}>
+              {loading ? (
+                <BrowserRouter>
+                  <Nav />
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route
+                      path="/detailleague/:id"
+                      element={<DetailLeague />}
+                    />
+                    <Route path="/detailteams/:id" element={<DetailTeam />} />
+                    <Route
+                      path="/detailplayer/:id"
+                      element={<DetailPlayer />}
+                    />
+                  </Routes>
+                </BrowserRouter>
+              ) : (
+                <LoadingScreen />
+              )}
+            </LoadingContext.Provider>
+          </AllLeaguesContext.Provider>
+        </AllTeamsContext.Provider>
+      </AllPlayersContext.Provider>
+    </SearchValueContext.Provider>
   );
 };
 
