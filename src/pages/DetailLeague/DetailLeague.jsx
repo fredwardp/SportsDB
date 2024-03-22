@@ -1,10 +1,9 @@
-import { useState } from "react";
 import "./DetailLeague.css";
 import { NavLink, useParams, Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "@fontsource/montserrat/600.css";
 import countries from "../../assets/Data/Countries";
-// import Footer from "../../componenten/Footer/Footer";
+import sports from "../../assets/Data/AllSports";
 
 const DetailLeague = () => {
     const [myLeague, setMyLeague] = useState();
@@ -17,19 +16,31 @@ const DetailLeague = () => {
     const countryNamesArray = countryNames.split(", ");
 
     useEffect(() => {
-        fetch("https://www.thesportsdb.com/api/v1/json/3/search_all_teams.php?l=English%20Premier%20League")
+        fetch("https://www.thesportsdb.com/api/v1/json/3/search_all_teams.php?l=EFL%20Trophy")
             .then((res) => res.json())
             .then((leagueData) => setMyLeague(leagueData))
             .catch((error) => console.log("An error has occured", error));
     }, []);
+    console.log(myLeague);
+    // // erstelle kopie von sports array
+    // const mySportsArray = [...sports];
+    // // entferne die leerzeichen
+    // const newMySportsArray = mySportsArray.map((e) => {
+    //     return e.data.replace(" ", "").toLowerCase();
+    // });
 
-    // console.log(myLeague);
+    let detailLeagueImageSource = "";
+    let sportVar = "";
+    myLeague ? (sportVar = myLeague.teams[0].strSport.toLowerCase()) : "";
+
+    sportVar ? (detailLeagueImageSource = sportVar) : (detailLeagueImageSource = "sports");
+
     return (
         <>
             <div className="container">
                 <header className="detailLeagueHeader">
                     <div className="headerContainerLeft">
-                        <img src="\img\detail-league\soccerHero.jpg" alt="soccer playground" className="detailLeagueHeaderImage" />
+                        <img src={`/img/detail-league/${detailLeagueImageSource}.jpg`} alt="" className="detailLeagueHeaderImage" />
                     </div>
                     <div className="detailLeagueHeaderContainerRight">
                         <div className="detailLeagueHeadingContainer">
