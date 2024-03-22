@@ -1,12 +1,15 @@
 import "./Nav.css";
-import React from "react";
-import { AllPlayersContext } from "../../context/context";
+import React, { useState } from "react";
+import { AllPlayersContext, SearchValueContext } from "../../context/context";
+import { useContext } from "react";
 import FetchData from "../FetchData/FetchData";
 import { useContext } from "react";
 import DarkMode from "../DarkMode/DarkMode";
 
 const Nav = () => {
   const { players, setPlayers } = useContext(AllPlayersContext);
+  const { searchValue, setSearchValue } = useContext(SearchValueContext);
+  console.log(searchValue);
 
   return (
     <section className="container">
@@ -48,6 +51,11 @@ const Nav = () => {
           <DarkMode />
         </div>
       </nav>
+      <div>
+        <a className="makeHover" href="">
+          TEST TEXT HOVER
+        </a>{" "}
+      </div>
     </section>
   );
 };
