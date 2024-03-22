@@ -4,7 +4,7 @@
 
 .team-name {
   position: absolute;
-  top: 5%;
+  top: 20%;
   left: 35%;
   color: var(--red);
   display: flex;
@@ -149,4 +149,5 @@
 
 .socials a {
   text-decoration: none;
+  cursor: pointer;
 }

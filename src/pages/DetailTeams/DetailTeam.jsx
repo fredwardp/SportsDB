@@ -1,17 +1,39 @@
 import "./DetailTeam.css";
+import { useContext, useEffect, useState } from 'react';
+import { AllTeamsContext } from "../../context/context";
+import { useParams } from 'react-router-dom';
+
 const DetailTeam = () => {
+
+  const { id } = useParams();
+  console.log("ID DER URL:", id);
+  const { teams } = useContext(AllTeamsContext);
+  const [teamDetail, setTeamDetail] = useState({});
+
+  useEffect(() => {
+    if (Array.isArray(teams) && teams.length > 0) {
+        const selectedTeam = teams.find(team => team.idTeam === id);
+        if (selectedTeam) {
+            setTeamDetail(selectedTeam);
+            console.log("Team Detail:", selectedTeam);
+        } else {
+            console.log("Kein Team gefunden.");
+        }
+    }
+}, [id, teams]);
+
   return (
     <section className="container container-padding">
-          <h1 className="team-name montserrat">ARSENAL</h1>
+           <h1 className="team-name montserrat">{teamDetail.strTeam}</h1>
         <div className="header-flex">
           <div className="team-infos">
-            <p className="detail-headline montserrat"> England</p>
+            <p className="detail-headline montserrat">{teamDetail.strCountry}</p>
             <p className="detail-text opensans">Country</p>
-            <p className="detail-headline montserrat">Holloway, London</p>
+            <p className="detail-headline montserrat">{teamDetail.strStadiumLocation}</p>
             <p className="detail-text opensans">Location</p>
-            <p className="detail-headline montserrat">1892</p>
+            <p className="detail-headline montserrat">{teamDetail.intFormedYear}</p>
             <p className="detail-text opensans">Established</p>
-            <p className="detail-headline montserrat">Soccer</p>
+            <p className="detail-headline montserrat">{teamDetail.strSport}</p>
             <p className="detail-text opensans">Sport</p>
           </div>
         <div className="team-img">
@@ -23,11 +45,11 @@ const DetailTeam = () => {
           <p className="detail-text">COMPETITION</p>
         </div>
         <div>
-          <p className="detail-comp-text">ENGLISH PREMIER LEAGUE</p>
-          <p className="detail-comp-text">UEFA EUROPA LEAGUE</p>
-          <p className="detail-comp-text">FA CUP</p>
-          <p className="detail-comp-text">EFL CUP</p>
-          <p className="detail-comp-text">FA COMMUNITY SHIELD</p>
+          <p className="detail-comp-text">{teamDetail.strLeague}</p>
+          <p className="detail-comp-text">{teamDetail.strLeague2}</p>
+          <p className="detail-comp-text">{teamDetail.strLeague3}</p>
+          <p className="detail-comp-text">{teamDetail.strLeague4}</p>
+          <p className="detail-comp-text">{teamDetail.strLeague5}</p>
         </div>
       </div>
       <div className="desc">
@@ -35,32 +57,30 @@ const DetailTeam = () => {
           <h2 className="desc-title montserrat">DESCRIPTION</h2>
         </div>
         <div className="desc-text">
-          <p className="opensans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur veritatis at blanditiis illum nisi! Dolor illo quas, eos fugiat voluptatum similique consectetur impedit voluptas quo molestias corporis suscipit ipsa quasi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur veritatis at blanditiis illum nisi! Dolor illo quas, eos fugiat voluptatum similique consectetur impedit voluptas quo molestias corporis suscipit ipsa quasi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur veritatis at blanditiis illum nisi! Dolor illo quas, eos fugiat voluptatum similique consectetur impedit voluptas quo molestias corporis suscipit ipsa quasi?</p>
-          <p className="opensans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, illo! Iure autem quidem atque tempora, voluptates aut dolorum asperiores nihil voluptate a unde maiores nulla quis laborum, neque sapiente eius.Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur veritatis at blanditiis illum nisi! Dolor illo quas, eos fugiat voluptatum similique consectetur impedit voluptas quo molestias corporis suscipit ipsa quasi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur veritatis at blanditiis illum nisi! Dolor illo quas, eos fugiat voluptatum similique consectetur impedit voluptas quo molestias corporis suscipit ipsa quasi?</p>
+          <p className="opensans">{teamDetail.strDescriptionEN}</p>
         </div>
       </div>
       <div className="logo-container">
-        <img className="team-logo" src="https://upload.wikimedia.org/wikipedia/hif/8/82/Arsenal_FC.png" alt="CLUB LOGO" />
+        <img className="team-logo" src={teamDetail.strTeamBadge} alt="CLUB LOGO" />
       </div>
       <h3 className="stadiumtitle opensans">STADIUM</h3>
       <section className="bottompage">
         <div className="stadium opensans">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem eius repellat esse nostrum eum obcaecati, illo totam numquam maiores debitis. Hic, voluptas dolore explicabo quidem quia repellat beatae ab voluptatibus.loremLorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem eius repellat esse nostrum eum obcaecati, illo totam numquam maiores debitis. Hic, voluptas dolore explicabo quidem quia repellat beatae ab voluptatibus.lorem</p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem eius repellat esse nostrum eum obcaecati, illo totam numquam maiores debitis. Hic, voluptas dolore explicabo quidem quia repellat beatae ab voluptatibus.loremLorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem eius repellat esse nostrum eum obcaecati, illo totam numquam maiores debitis. Hic, voluptas dolore explicabo quidem quia repellat beatae ab voluptatibus.lorem</p>
+          <p>{teamDetail.strStadiumDescription}</p>
         </div>
         <div className="info1 opensans">
-          <p className="info1-title">EMIRATES STADIUM</p>
+          <p className="info1-title">{teamDetail.strStadium}</p>
           <p className="info1-info">Home</p>
-          <p className="info1-title">60338</p>
+          <p className="info1-title">{teamDetail.intStadiumCapacity}</p>
           <p className="info1-info">Capacity</p>
         </div>
       </section>
       <div className="socials opensans">
-        <a className="opensans" href="#">WEBSITE</a>
-        <a className="opensans" href="#">FACEBOOK</a>
-        <a className="opensans" href="#">TWITTER</a>
-        <a className="opensans" href="#">INSTAGRAM</a>
-        <a className="opensans" href="#">YOUTUBE</a>
+        <a className="opensans" href={teamDetail.strWebsite}>WEBSITE</a>
+        <a className="opensans" href={teamDetail.strFacebook}>FACEBOOK</a>
+        <a className="opensans" href={teamDetail.strTwitter}>TWITTER</a>
+        <a className="opensans" href={teamDetail.strInstagram}>INSTAGRAM</a>
+        <a className="opensans" href={teamDetail.strYoutube}>YOUTUBE</a>
       </div>
     </section>
   )
