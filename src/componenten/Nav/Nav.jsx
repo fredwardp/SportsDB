@@ -1,11 +1,13 @@
 import "./Nav.css";
-import React from "react";
-import { AllPlayersContext } from "../../context/context";
-import FetchData from "../FetchData/FetchData";
+import React, { useState } from "react";
+import { AllPlayersContext, SearchValueContext } from "../../context/context";
 import { useContext } from "react";
+import FetchData from "../FetchData/FetchData";
 
 const Nav = () => {
   const { players, setPlayers } = useContext(AllPlayersContext);
+  const { searchValue, setSearchValue } = useContext(SearchValueContext);
+  console.log(searchValue);
 
   return (
     <section className="container">
@@ -43,9 +45,20 @@ const Nav = () => {
               <line x1="21" x2="16.65" y1="21" y2="16.65" />
             </svg>
           </button>
-          <input type="text" className="input-search" placeholder="Suche..." />
+          <input
+            type="text"
+            className="input-search"
+            onChange={(event) => setSearchValue(event.target.value)}
+            value={searchValue}
+            placeholder="Suche..."
+          />
         </div>
       </nav>
+      <div>
+        <a className="makeHover" href="">
+          TEST TEXT HOVER
+        </a>{" "}
+      </div>
     </section>
   );
 };
