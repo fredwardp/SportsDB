@@ -26,7 +26,7 @@ const FetchData = () => {
   useEffect(() => {
     fetch(`https://www.thesportsdb.com/api/v1/json/3/search_all_teams.php?l=`)
     .then((res) => res.json())
-    .then((teamsData) => setTeams(teamsData))
+    .then((teamsData) => setTeams(teamsData.teams))
     .catch((err) => console.log("Noch keine Daten", err));
   }, []);
 
