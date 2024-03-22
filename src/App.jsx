@@ -15,6 +15,7 @@ import {
 import LoadingScreen from "./componenten/LoadingScreen/LoadingScreen";
 import DetailPlayer from "./pages/DetailPlayer/DetailPlayer";
 import Nav from "./componenten/Nav/Nav";
+import Footer from "./componenten/Footer/Footer";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -51,6 +52,7 @@ const App = () => {
                           element={<DetailPlayer />}
                         />
                       </Routes>
+                      <Footer />
                     </BrowserRouter>
                   ) : (
                     <LoadingScreen />
