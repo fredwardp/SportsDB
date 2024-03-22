@@ -6,6 +6,8 @@ import HomeFilterDropDown from "../../componenten/HomeFilterDropDown/HomeFilterD
 import { SportPopUpContext, CountryPopUpContext } from "../../context/context";
 import HomeFilterPopUp from "../../componenten/HomeFilterPopUp/HomeFilterPopUp";
 import Header from "../../componenten/Header/Header";
+import { Link } from "react-router-dom";
+import Filter from "../../componenten/Filter/Filter";
 
 const Home = () => {
   const { countryPopUp, setCountryPopUp } = useContext(CountryPopUpContext);
@@ -15,7 +17,9 @@ const Home = () => {
   return (
     <>
       <Header />
+      <Filter />
       <section className="container filter_section">
+        <Link to="/detailleague/English Premier League">Test</Link>
         <div className="filter_spcbtw">
           <div className="filter_popup_wrapper">
             {countryPopUp ? <HomeFilterPopUp func="c" /> : ""}
@@ -30,6 +34,7 @@ const Home = () => {
             <HomeFilterDropDown func="s" data={sports} name="All Sports" />
           </div>
         </div>
+        <div className="container_output_wrapper"></div>
       </section>
     </>
   );

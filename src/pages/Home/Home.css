@@ -3,8 +3,7 @@
 }
 
 .filter_spcbtw {
-  /* padding-bottom: 96px; */
-  padding-bottom: 90vh;
+  padding-bottom: 96px;
   display: flex;
   justify-content: space-between;
 }
@@ -76,4 +75,8 @@
 
 .filter_dropdown div p {
   padding: 5px 12px;
+}
+
+.container_output_wrapper {
+  padding-bottom: 50vh;
 }
