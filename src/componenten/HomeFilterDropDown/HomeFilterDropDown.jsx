@@ -1,11 +1,14 @@
 import dropDownImg from "/img/dropdown.svg";
 import dropDownTurnedImg from "/img/dropdown_turned.svg";
 import crossImg from "/img/cross.svg";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { CountryPopUpContext, SportPopUpContext } from "../../context/context";
 
 const HomeFilterDropDown = ({ name, data, func }) => {
   const [countryCross, setCountryCross] = useState("");
   const [filterOpen, setFilterOpen] = useState(false);
+  const { countryPopUp, setCountryPopUp } = useContext(CountryPopUpContext);
+  const { sportPopUp, setSportPopUp } = useContext(SportPopUpContext);
 
   return (
     <div className="filter_dropdown">
@@ -24,7 +27,9 @@ const HomeFilterDropDown = ({ name, data, func }) => {
             className="dropdown_border"
             onClick={() => {
               setCountryCross(item.data);
-              func();
+              func === "c"
+                ? setCountryPopUp(item.data)
+                : setSportPopUp(item.data);
             }}
           >
             <div className="filter_square ">

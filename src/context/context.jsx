@@ -5,3 +5,5 @@ export const AllLeaguesContext = createContext();
 export const AllTeamsContext = createContext();
 export const AllPlayersContext = createContext();
 export const SearchValueContext = createContext();
+export const CountryPopUpContext = createContext();
+export const SportPopUpContext = createContext();

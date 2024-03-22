@@ -5,16 +5,31 @@
 .filter_spcbtw {
   /* padding-bottom: 96px; */
   padding-bottom: 90vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter_popup_wrapper {
+  display: flex;
+  gap: 2vw;
 }
 
 .filter_popup {
-  display: none;
+  /* display: none;
+  position: absolute; */
+  border: 4px solid var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 14px;
+  gap: 11px;
 }
 
 .filter_button_wrapper {
   display: flex;
   justify-content: flex-end;
   gap: 48px;
+  position: relative;
 }
 
 .filter_dropdown {

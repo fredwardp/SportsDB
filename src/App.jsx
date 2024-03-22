@@ -9,6 +9,8 @@ import {
   AllPlayersContext,
   AllTeamsContext,
   SearchValueContext,
+  SportPopUpContext,
+  CountryPopUpContext,
 } from "./context/context";
 import LoadingScreen from "./componenten/LoadingScreen/LoadingScreen";
 import DetailPlayer from "./pages/DetailPlayer/DetailPlayer";
@@ -20,37 +22,46 @@ const App = () => {
   const [teams, setTeams] = useState();
   const [players, setPlayers] = useState();
   const [searchValue, setSearchValue] = useState();
+  const [countryPopUp, setCountryPopUp] = useState();
+  const [sportPopUp, setSportPopUp] = useState();
 
   return (
-    <SearchValueContext.Provider value={{ searchValue, setSearchValue }}>
-      <AllPlayersContext.Provider value={{ players, setPlayers }}>
-        <AllTeamsContext.Provider value={{ teams, setTeams }}>
-          <AllLeaguesContext.Provider value={{ leagues, setLeagues }}>
-            <LoadingContext.Provider value={{ loading, setLoading }}>
-              {loading ? (
-                <BrowserRouter>
-                  <Nav />
-                  <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route
-                      path="/detailleague/:id"
-                      element={<DetailLeague />}
-                    />
-                    <Route path="/detailteams/:id" element={<DetailTeam />} />
-                    <Route
-                      path="/detailplayer/:id"
-                      element={<DetailPlayer />}
-                    />
-                  </Routes>
-                </BrowserRouter>
-              ) : (
-                <LoadingScreen />
-              )}
-            </LoadingContext.Provider>
-          </AllLeaguesContext.Provider>
-        </AllTeamsContext.Provider>
-      </AllPlayersContext.Provider>
-    </SearchValueContext.Provider>
+    <SportPopUpContext.Provider value={{ sportPopUp, setSportPopUp }}>
+      <CountryPopUpContext.Provider value={{ countryPopUp, setCountryPopUp }}>
+        <SearchValueContext.Provider value={{ searchValue, setSearchValue }}>
+          <AllPlayersContext.Provider value={{ players, setPlayers }}>
+            <AllTeamsContext.Provider value={{ teams, setTeams }}>
+              <AllLeaguesContext.Provider value={{ leagues, setLeagues }}>
+                <LoadingContext.Provider value={{ loading, setLoading }}>
+                  {loading ? (
+                    <BrowserRouter>
+                      <Nav />
+                      <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route
+                          path="/detailleague/:id"
+                          element={<DetailLeague />}
+                        />
+                        <Route
+                          path="/detailteams/:id"
+                          element={<DetailTeam />}
+                        />
+                        <Route
+                          path="/detailplayer/:id"
+                          element={<DetailPlayer />}
+                        />
+                      </Routes>
+                    </BrowserRouter>
+                  ) : (
+                    <LoadingScreen />
+                  )}
+                </LoadingContext.Provider>
+              </AllLeaguesContext.Provider>
+            </AllTeamsContext.Provider>
+          </AllPlayersContext.Provider>
+        </SearchValueContext.Provider>
+      </CountryPopUpContext.Provider>
+    </SportPopUpContext.Provider>
   );
 };
 
