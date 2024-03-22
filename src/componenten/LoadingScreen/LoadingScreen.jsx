@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react";
 import { LoadingContext } from "../../context/context";
 import FetchData from "../FetchData/FetchData";
+import "./LoadingScreen.css";
 
 const LoadingScreen = () => {
   const { loading, setLoading } = useContext(LoadingContext);
@@ -8,12 +9,15 @@ const LoadingScreen = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(true);
-    }, 2100);
+    }, 2000);
   }, []);
   return (
     <section>
       <FetchData />
-      <h1>test</h1>
+      <div className="loading-anim">
+        <img src="../../../public/img/anim.gif" alt="Loading nimation" />
+        <h1>DIE ERDNUSSBUTTER BANDE</h1>
+      </div>
     </section>
   );
 };
