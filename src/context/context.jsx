@@ -4,3 +4,4 @@ export const AllCountriesContext = createContext();
 export const AllLeaguesContext = createContext();
 export const AllTeamsContext = createContext();
 export const AllPlayersContext = createContext();
+export const SearchValueContext = createContext();

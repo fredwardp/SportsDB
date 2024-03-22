@@ -21,14 +21,17 @@ const FetchData = () => {
   //       .then((leaguesData) => setLeagues(leaguesData))
   //       .catch((err) => console.log("noch keine Daten", err));
   //   }, []);
-  //   useEffect(() => {
-  //     fetch(
-  //       `https://www.thesportsdb.com/api/v1/json/3/search_all_teams.php?l=${l}`
-  //     )
-  //       .then((res) => res.json())
-  //       .then((teamsData) => setTeams(teamsData))
-  //       .catch((err) => console.log("noch keine Daten", err));
-  //   }, []);
+
+
+  //useEffect(() => {
+  //  fetch(`https://www.thesportsdb.com/api/v1/json/3/search_all_teams.php?l=${l}`)
+  //    .then((res) => res.json())
+  //    .then((teamsData) => setTeams(teamsData))
+  //    .catch((err) => console.log("noch keine Daten", err));
+  //}, []);
+
+
+
   //   useEffect(() => {
   //     fetch(`www.thesportsdb.com/api/v1/json/3/searchplayers.php?p=${p}`)
   //       .then((res) => res.json())
