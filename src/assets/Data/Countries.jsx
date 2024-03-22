@@ -1,774 +1,774 @@
 const countries = [
   {
-    name_en: "Andorra",
+    data: "Andorra",
   },
   {
-    name_en: "United Arab Emirates",
+    data: "United Arab Emirates",
   },
   {
-    name_en: "Afghanistan",
+    data: "Afghanistan",
   },
   {
-    name_en: "Antigua and Barbuda",
+    data: "Antigua and Barbuda",
   },
   {
-    name_en: "Anguilla",
+    data: "Anguilla",
   },
   {
-    name_en: "Albania",
+    data: "Albania",
   },
   {
-    name_en: "Armenia",
+    data: "Armenia",
   },
   {
-    name_en: "Angola",
+    data: "Angola",
   },
   {
-    name_en: "Antarctica",
+    data: "Antarctica",
   },
   {
-    name_en: "Argentina",
+    data: "Argentina",
   },
   {
-    name_en: "American Samoa",
+    data: "American Samoa",
   },
   {
-    name_en: "Austria",
+    data: "Austria",
   },
   {
-    name_en: "Australia",
+    data: "Australia",
   },
   {
-    name_en: "Aruba",
+    data: "Aruba",
   },
   {
-    name_en: "Åland Islands",
+    data: "Åland Islands",
   },
   {
-    name_en: "Azerbaijan",
+    data: "Azerbaijan",
   },
   {
-    name_en: "Bosnia and Herzegovina",
+    data: "Bosnia and Herzegovina",
   },
   {
-    name_en: "Barbados",
+    data: "Barbados",
   },
   {
-    name_en: "Bangladesh",
+    data: "Bangladesh",
   },
   {
-    name_en: "Belgium",
+    data: "Belgium",
   },
   {
-    name_en: "Burkina Faso",
+    data: "Burkina Faso",
   },
   {
-    name_en: "Bulgaria",
+    data: "Bulgaria",
   },
   {
-    name_en: "Bahrain",
+    data: "Bahrain",
   },
   {
-    name_en: "Burundi",
+    data: "Burundi",
   },
   {
-    name_en: "Benin",
+    data: "Benin",
   },
   {
-    name_en: "Saint Barthélemy",
+    data: "Saint Barthélemy",
   },
   {
-    name_en: "Bermuda",
+    data: "Bermuda",
   },
   {
-    name_en: "Brunei Darussalam",
+    data: "Brunei Darussalam",
   },
   {
-    name_en: "Bolivia",
+    data: "Bolivia",
   },
   {
-    name_en: "Caribbean Netherlands ",
+    data: "Caribbean Netherlands ",
   },
   {
-    name_en: "Brazil",
+    data: "Brazil",
   },
   {
-    name_en: "Bahamas",
+    data: "Bahamas",
   },
   {
-    name_en: "Bhutan",
+    data: "Bhutan",
   },
   {
-    name_en: "Bouvet Island",
+    data: "Bouvet Island",
   },
   {
-    name_en: "Botswana",
+    data: "Botswana",
   },
   {
-    name_en: "Belarus",
+    data: "Belarus",
   },
   {
-    name_en: "Belize",
+    data: "Belize",
   },
   {
-    name_en: "Canada",
+    data: "Canada",
   },
   {
-    name_en: "Cocos (Keeling) Islands",
+    data: "Cocos (Keeling) Islands",
   },
   {
-    name_en: "Democratic Republic of Congo",
+    data: "Democratic Republic of Congo",
   },
   {
-    name_en: "Central African Republic",
+    data: "Central African Republic",
   },
   {
-    name_en: "Congo",
+    data: "Congo",
   },
   {
-    name_en: "Switzerland",
+    data: "Switzerland",
   },
   {
-    name_en: "Ivory Coast",
+    data: "Ivory Coast",
   },
   {
-    name_en: "Cook Islands",
+    data: "Cook Islands",
   },
   {
-    name_en: "Chile",
+    data: "Chile",
   },
   {
-    name_en: "Cameroon",
+    data: "Cameroon",
   },
   {
-    name_en: "China",
+    data: "China",
   },
   {
-    name_en: "Colombia",
+    data: "Colombia",
   },
   {
-    name_en: "Costa Rica",
+    data: "Costa Rica",
   },
   {
-    name_en: "Cuba",
+    data: "Cuba",
   },
   {
-    name_en: "Cape Verde",
+    data: "Cape Verde",
   },
   {
-    name_en: "Curaçao",
+    data: "Curaçao",
   },
   {
-    name_en: "Christmas Island",
+    data: "Christmas Island",
   },
   {
-    name_en: "Cyprus",
+    data: "Cyprus",
   },
   {
-    name_en: "Czech Republic",
+    data: "Czech Republic",
   },
   {
-    name_en: "Germany",
+    data: "Germany",
   },
   {
-    name_en: "Djibouti",
+    data: "Djibouti",
   },
   {
-    name_en: "Denmark",
+    data: "Denmark",
   },
   {
-    name_en: "Dominica",
+    data: "Dominica",
   },
   {
-    name_en: "Dominican Republic",
+    data: "Dominican Republic",
   },
   {
-    name_en: "Algeria",
+    data: "Algeria",
   },
   {
-    name_en: "Ecuador",
+    data: "Ecuador",
   },
   {
-    name_en: "Estonia",
+    data: "Estonia",
   },
   {
-    name_en: "Egypt",
+    data: "Egypt",
   },
   {
-    name_en: "Western Sahara",
+    data: "Western Sahara",
   },
   {
-    name_en: "England",
+    data: "England",
   },
   {
-    name_en: "Eritrea",
+    data: "Eritrea",
   },
   {
-    name_en: "Spain",
+    data: "Spain",
   },
   {
-    name_en: "Ethiopia",
+    data: "Ethiopia",
   },
   {
-    name_en: "Europe",
+    data: "Europe",
   },
   {
-    name_en: "Finland",
+    data: "Finland",
   },
   {
-    name_en: "Fiji",
+    data: "Fiji",
   },
   {
-    name_en: "Falkland Islands",
+    data: "Falkland Islands",
   },
   {
-    name_en: "Micronesia, Federated States of",
+    data: "Micronesia, Federated States of",
   },
   {
-    name_en: "Faroe Islands",
+    data: "Faroe Islands",
   },
   {
-    name_en: "France",
+    data: "France",
   },
   {
-    name_en: "Gabon",
+    data: "Gabon",
   },
   {
-    name_en: "United Kingdom",
+    data: "United Kingdom",
   },
   {
-    name_en: "Grenada",
+    data: "Grenada",
   },
   {
-    name_en: "Georgia",
+    data: "Georgia",
   },
   {
-    name_en: "French Guiana",
+    data: "French Guiana",
   },
   {
-    name_en: "Guernsey",
+    data: "Guernsey",
   },
   {
-    name_en: "Ghana",
+    data: "Ghana",
   },
   {
-    name_en: "Gibraltar",
+    data: "Gibraltar",
   },
   {
-    name_en: "Greenland",
+    data: "Greenland",
   },
   {
-    name_en: "Gambia",
+    data: "Gambia",
   },
   {
-    name_en: "Guinea",
+    data: "Guinea",
   },
   {
-    name_en: "Guadeloupe",
+    data: "Guadeloupe",
   },
   {
-    name_en: "Equatorial Guinea",
+    data: "Equatorial Guinea",
   },
   {
-    name_en: "Greece",
+    data: "Greece",
   },
   {
-    name_en: "South Georgia",
+    data: "South Georgia",
   },
   {
-    name_en: "Guatemala",
+    data: "Guatemala",
   },
   {
-    name_en: "Guam",
+    data: "Guam",
   },
   {
-    name_en: "Guinea-Bissau",
+    data: "Guinea-Bissau",
   },
   {
-    name_en: "Guyana",
+    data: "Guyana",
   },
   {
-    name_en: "Hong Kong",
+    data: "Hong Kong",
   },
   {
-    name_en: "Heard and McDonald Islands",
+    data: "Heard and McDonald Islands",
   },
   {
-    name_en: "Honduras",
+    data: "Honduras",
   },
   {
-    name_en: "Croatia",
+    data: "Croatia",
   },
   {
-    name_en: "Haiti",
+    data: "Haiti",
   },
   {
-    name_en: "Hungary",
+    data: "Hungary",
   },
   {
-    name_en: "International",
+    data: "International",
   },
   {
-    name_en: "Indonesia",
+    data: "Indonesia",
   },
   {
-    name_en: "Ireland",
+    data: "Ireland",
   },
   {
-    name_en: "Israel",
+    data: "Israel",
   },
   {
-    name_en: "Isle of Man",
+    data: "Isle of Man",
   },
   {
-    name_en: "India",
+    data: "India",
   },
   {
-    name_en: "British Indian Ocean Territory",
+    data: "British Indian Ocean Territory",
   },
   {
-    name_en: "Iraq",
+    data: "Iraq",
   },
   {
-    name_en: "Iran",
+    data: "Iran",
   },
   {
-    name_en: "Iceland",
+    data: "Iceland",
   },
   {
-    name_en: "Italy",
+    data: "Italy",
   },
   {
-    name_en: "Jersey",
+    data: "Jersey",
   },
   {
-    name_en: "Jamaica",
+    data: "Jamaica",
   },
   {
-    name_en: "Jordan",
+    data: "Jordan",
   },
   {
-    name_en: "Japan",
+    data: "Japan",
   },
   {
-    name_en: "Kenya",
+    data: "Kenya",
   },
   {
-    name_en: "Kyrgyzstan",
+    data: "Kyrgyzstan",
   },
   {
-    name_en: "Cambodia",
+    data: "Cambodia",
   },
   {
-    name_en: "Kiribati",
+    data: "Kiribati",
   },
   {
-    name_en: "Comoros",
+    data: "Comoros",
   },
   {
-    name_en: "Saint Kitts and Nevis",
+    data: "Saint Kitts and Nevis",
   },
   {
-    name_en: "North Korea",
+    data: "North Korea",
   },
   {
-    name_en: "South Korea",
+    data: "South Korea",
   },
   {
-    name_en: "Kuwait",
+    data: "Kuwait",
   },
   {
-    name_en: "Cayman Islands",
+    data: "Cayman Islands",
   },
   {
-    name_en: "Kazakhstan",
+    data: "Kazakhstan",
   },
   {
-    name_en: "Lao People's Democratic Republic",
+    data: "Lao People's Democratic Republic",
   },
   {
-    name_en: "Lebanon",
+    data: "Lebanon",
   },
   {
-    name_en: "Saint Lucia",
+    data: "Saint Lucia",
   },
   {
-    name_en: "Liechtenstein",
+    data: "Liechtenstein",
   },
   {
-    name_en: "Sri Lanka",
+    data: "Sri Lanka",
   },
   {
-    name_en: "Liberia",
+    data: "Liberia",
   },
   {
-    name_en: "Lesotho",
+    data: "Lesotho",
   },
   {
-    name_en: "Lithuania",
+    data: "Lithuania",
   },
   {
-    name_en: "Luxembourg",
+    data: "Luxembourg",
   },
   {
-    name_en: "Latvia",
+    data: "Latvia",
   },
   {
-    name_en: "Libya",
+    data: "Libya",
   },
   {
-    name_en: "Morocco",
+    data: "Morocco",
   },
   {
-    name_en: "Monaco",
+    data: "Monaco",
   },
   {
-    name_en: "Moldova",
+    data: "Moldova",
   },
   {
-    name_en: "Montenegro",
+    data: "Montenegro",
   },
   {
-    name_en: "Saint-Martin (France)",
+    data: "Saint-Martin (France)",
   },
   {
-    name_en: "Madagascar",
+    data: "Madagascar",
   },
   {
-    name_en: "Marshall Islands",
+    data: "Marshall Islands",
   },
   {
-    name_en: "Macedonia",
+    data: "Macedonia",
   },
   {
-    name_en: "Mali",
+    data: "Mali",
   },
   {
-    name_en: "Myanmar",
+    data: "Myanmar",
   },
   {
-    name_en: "Mongolia",
+    data: "Mongolia",
   },
   {
-    name_en: "Macau",
+    data: "Macau",
   },
   {
-    name_en: "Northern Mariana Islands",
+    data: "Northern Mariana Islands",
   },
   {
-    name_en: "Martinique",
+    data: "Martinique",
   },
   {
-    name_en: "Mauritania",
+    data: "Mauritania",
   },
   {
-    name_en: "Montserrat",
+    data: "Montserrat",
   },
   {
-    name_en: "Malta",
+    data: "Malta",
   },
   {
-    name_en: "Mauritius",
+    data: "Mauritius",
   },
   {
-    name_en: "Maldives",
+    data: "Maldives",
   },
   {
-    name_en: "Malawi",
+    data: "Malawi",
   },
   {
-    name_en: "Mexico",
+    data: "Mexico",
   },
   {
-    name_en: "Malaysia",
+    data: "Malaysia",
   },
   {
-    name_en: "Mozambique",
+    data: "Mozambique",
   },
   {
-    name_en: "Northern Ireland",
+    data: "Northern Ireland",
   },
   {
-    name_en: "Namibia",
+    data: "Namibia",
   },
   {
-    name_en: "New Caledonia",
+    data: "New Caledonia",
   },
   {
-    name_en: "Niger",
+    data: "Niger",
   },
   {
-    name_en: "Norfolk Island",
+    data: "Norfolk Island",
   },
   {
-    name_en: "Nigeria",
+    data: "Nigeria",
   },
   {
-    name_en: "Nicaragua",
+    data: "Nicaragua",
   },
   {
-    name_en: "The Netherlands",
+    data: "The Netherlands",
   },
   {
-    name_en: "Norway",
+    data: "Norway",
   },
   {
-    name_en: "Nepal",
+    data: "Nepal",
   },
   {
-    name_en: "Nauru",
+    data: "Nauru",
   },
   {
-    name_en: "Niue",
+    data: "Niue",
   },
   {
-    name_en: "New Zealand",
+    data: "New Zealand",
   },
   {
-    name_en: "Oman",
+    data: "Oman",
   },
   {
-    name_en: "Panama",
+    data: "Panama",
   },
   {
-    name_en: "Peru",
+    data: "Peru",
   },
   {
-    name_en: "French Polynesia",
+    data: "French Polynesia",
   },
   {
-    name_en: "Papua New Guinea",
+    data: "Papua New Guinea",
   },
   {
-    name_en: "Philippines",
+    data: "Philippines",
   },
   {
-    name_en: "Pakistan",
+    data: "Pakistan",
   },
   {
-    name_en: "Poland",
+    data: "Poland",
   },
   {
-    name_en: "St. Pierre and Miquelon",
+    data: "St. Pierre and Miquelon",
   },
   {
-    name_en: "Pitcairn",
+    data: "Pitcairn",
   },
   {
-    name_en: "Puerto Rico",
+    data: "Puerto Rico",
   },
   {
-    name_en: "Palestine, State of",
+    data: "Palestine, State of",
   },
   {
-    name_en: "Portugal",
+    data: "Portugal",
   },
   {
-    name_en: "Palau",
+    data: "Palau",
   },
   {
-    name_en: "Paraguay",
+    data: "Paraguay",
   },
   {
-    name_en: "Qatar",
+    data: "Qatar",
   },
   {
-    name_en: "Réunion",
+    data: "Réunion",
   },
   {
-    name_en: "Romania",
+    data: "Romania",
   },
   {
-    name_en: "Serbia",
+    data: "Serbia",
   },
   {
-    name_en: "Russian Federation",
+    data: "Russian Federation",
   },
   {
-    name_en: "Rwanda",
+    data: "Rwanda",
   },
   {
-    name_en: "Scotland",
+    data: "Scotland",
   },
   {
-    name_en: "Saudi Arabia",
+    data: "Saudi Arabia",
   },
   {
-    name_en: "Solomon Islands",
+    data: "Solomon Islands",
   },
   {
-    name_en: "Seychelles",
+    data: "Seychelles",
   },
   {
-    name_en: "Sudan",
+    data: "Sudan",
   },
   {
-    name_en: "Sweden",
+    data: "Sweden",
   },
   {
-    name_en: "Singapore",
+    data: "Singapore",
   },
   {
-    name_en: "Saint Helena",
+    data: "Saint Helena",
   },
   {
-    name_en: "Slovenia",
+    data: "Slovenia",
   },
   {
-    name_en: "Svalbard and Jan Mayen Islands",
+    data: "Svalbard and Jan Mayen Islands",
   },
   {
-    name_en: "Slovakia",
+    data: "Slovakia",
   },
   {
-    name_en: "Sierra Leone",
+    data: "Sierra Leone",
   },
   {
-    name_en: "San Marino",
+    data: "San Marino",
   },
   {
-    name_en: "Senegal",
+    data: "Senegal",
   },
   {
-    name_en: "Somalia",
+    data: "Somalia",
   },
   {
-    name_en: "Suriname",
+    data: "Suriname",
   },
   {
-    name_en: "South Sudan",
+    data: "South Sudan",
   },
   {
-    name_en: "Sao Tome and Principe",
+    data: "Sao Tome and Principe",
   },
   {
-    name_en: "El Salvador",
+    data: "El Salvador",
   },
   {
-    name_en: "Sint Maarten (Dutch part)",
+    data: "Sint Maarten (Dutch part)",
   },
   {
-    name_en: "Syria",
+    data: "Syria",
   },
   {
-    name_en: "Swaziland",
+    data: "Swaziland",
   },
   {
-    name_en: "Turks and Caicos Islands",
+    data: "Turks and Caicos Islands",
   },
   {
-    name_en: "Chad",
+    data: "Chad",
   },
   {
-    name_en: "French Southern Territories",
+    data: "French Southern Territories",
   },
   {
-    name_en: "Togo",
+    data: "Togo",
   },
   {
-    name_en: "Thailand",
+    data: "Thailand",
   },
   {
-    name_en: "Tajikistan",
+    data: "Tajikistan",
   },
   {
-    name_en: "Tokelau",
+    data: "Tokelau",
   },
   {
-    name_en: "Timor-Leste",
+    data: "Timor-Leste",
   },
   {
-    name_en: "Turkmenistan",
+    data: "Turkmenistan",
   },
   {
-    name_en: "Tunisia",
+    data: "Tunisia",
   },
   {
-    name_en: "Tonga",
+    data: "Tonga",
   },
   {
-    name_en: "Turkey",
+    data: "Turkey",
   },
   {
-    name_en: "Trinidad and Tobago",
+    data: "Trinidad and Tobago",
   },
   {
-    name_en: "Tuvalu",
+    data: "Tuvalu",
   },
   {
-    name_en: "Taiwan",
+    data: "Taiwan",
   },
   {
-    name_en: "Tanzania",
+    data: "Tanzania",
   },
   {
-    name_en: "Ukraine",
+    data: "Ukraine",
   },
   {
-    name_en: "Uganda",
+    data: "Uganda",
   },
   {
-    name_en: "United States Minor Outlying Islands",
+    data: "United States Minor Outlying Islands",
   },
   {
-    name_en: "United States",
+    data: "United States",
   },
   {
-    name_en: "Uruguay",
+    data: "Uruguay",
   },
   {
-    name_en: "Uzbekistan",
+    data: "Uzbekistan",
   },
   {
-    name_en: "Vatican",
+    data: "Vatican",
   },
   {
-    name_en: "Saint Vincent and the Grenadines",
+    data: "Saint Vincent and the Grenadines",
   },
   {
-    name_en: "Venezuela",
+    data: "Venezuela",
   },
   {
-    name_en: "Virgin Islands (British)",
+    data: "Virgin Islands (British)",
   },
   {
-    name_en: "Virgin Islands (U.S.)",
+    data: "Virgin Islands (U.S.)",
   },
   {
-    name_en: "Vietnam",
+    data: "Vietnam",
   },
   {
-    name_en: "Vanuatu",
+    data: "Vanuatu",
   },
   {
-    name_en: "Worldwide",
+    data: "Worldwide",
   },
   {
-    name_en: "Wales",
+    data: "Wales",
   },
   {
-    name_en: "Wallis and Futuna Islands",
+    data: "Wallis and Futuna Islands",
   },
   {
-    name_en: "Samoa",
+    data: "Samoa",
   },
   {
-    name_en: "Kosovo",
+    data: "Kosovo",
   },
   {
-    name_en: "Yemen",
+    data: "Yemen",
   },
   {
-    name_en: "Mayotte",
+    data: "Mayotte",
   },
   {
-    name_en: "South Africa",
+    data: "South Africa",
   },
   {
-    name_en: "Zambia",
+    data: "Zambia",
   },
   {
-    name_en: "Zimbabwe",
+    data: "Zimbabwe",
   },
 ];
 export default countries;
