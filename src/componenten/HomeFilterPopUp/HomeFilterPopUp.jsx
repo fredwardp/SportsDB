@@ -9,7 +9,12 @@ const HomeFilterPopUp = ({ func }) => {
       <div className="filter_popup">
         {func === "c" ? (
           <>
-            <img onClick={() => setCountryPopUp("")} src={crossImg} alt="" />
+            <img
+              style={{ cursor: "pointer" }}
+              onClick={() => setCountryPopUp("")}
+              src={crossImg}
+              alt=""
+            />
             <p>{countryPopUp}</p>
           </>
         ) : (
@@ -17,7 +22,12 @@ const HomeFilterPopUp = ({ func }) => {
         )}
         {func === "a" ? (
           <>
-            <img onClick={() => setSportPopUp("")} src={crossImg} alt="" />
+            <img
+              style={{ cursor: "pointer" }}
+              onClick={() => setSportPopUp("")}
+              src={crossImg}
+              alt=""
+            />
             <p>{sportPopUp}</p>
           </>
         ) : (
