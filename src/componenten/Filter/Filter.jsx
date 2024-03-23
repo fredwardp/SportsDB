@@ -54,6 +54,9 @@ const Filter = ({ data }) => {
   // ich mappe über jeden Key des Objekts (A-Z) und darin nochmal über jeden Index um je einen Div mit dem Übergeordneten Buchstaben zu haben (A-Z). In jeden dieser Div's werden weitere Div's eingefügt, welche die Daten zu je einer SportLiga beinhalten
   console.log();
   const leagueDivs = Object.keys(groupedLeagues).map((letter) => {
+
+
+    
     if (letter !== "_" && letter !== "e") {
       return (
         <div className="letter_div" key={letter}>

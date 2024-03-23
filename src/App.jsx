@@ -16,6 +16,7 @@ import LoadingScreen from "./componenten/LoadingScreen/LoadingScreen";
 import DetailPlayer from "./pages/DetailPlayer/DetailPlayer";
 import Nav from "./componenten/Nav/Nav";
 import Footer from "./componenten/Footer/Footer";
+import ScrollUp from "./componenten/ScrollUp/ScrollUp";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -36,6 +37,7 @@ const App = () => {
                 <LoadingContext.Provider value={{ loading, setLoading }}>
                   {loading ? (
                     <BrowserRouter>
+                      <ScrollUp />
                       <Nav />
                       <Routes>
                         <Route path="/" element={<Home />} />

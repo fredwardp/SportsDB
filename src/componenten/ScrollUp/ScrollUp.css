@@ -1,14 +1,17 @@
 .scrollImage {
-    position: fixed;
-    bottom: 40px;
-    right: 25px;
-    z-index: 20;
-    height: 70px;
-    width: 70px;
-    cursor: pointer;
+  position: fixed;
+  bottom: 40px;
+  right: 25px;
+  z-index: 20;
+  height: 70px;
+  width: 70px;
+  cursor: pointer;
+}
+
+.scrollPath {
+  transition: all 0.3s ease-in-out;
 }
 
 .scrollPath:hover {
-    fill: var(--red);
-    transition: transform 0.3s ease-in-out;
+  fill: var(--red);
 }
