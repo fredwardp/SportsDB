@@ -40,6 +40,7 @@
   position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: var(--black);
 }
 
@@ -73,6 +74,8 @@
   height: 16px;
   border: 2px solid var(--white);
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .dspl_none {

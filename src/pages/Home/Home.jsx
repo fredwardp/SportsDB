@@ -1,19 +1,35 @@
 import "./Home.css";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import countries from "../../assets/Data/Countries";
 import sports from "../../assets/Data/AllSports";
 import HomeFilterDropDown from "../../componenten/HomeFilterDropDown/HomeFilterDropDown";
-import { SportPopUpContext, CountryPopUpContext } from "../../context/context";
+import {
+  SportPopUpContext,
+  CountryPopUpContext,
+  AllLeaguesContext,
+} from "../../context/context";
 import HomeFilterPopUp from "../../componenten/HomeFilterPopUp/HomeFilterPopUp";
 import Header from "../../componenten/Header/Header";
-import { Link } from "react-router-dom";
 import Filter from "../../componenten/Filter/Filter";
+import allLeagues from "../../assets/Data/AllLeagues";
 
 const Home = () => {
   const { countryPopUp, setCountryPopUp } = useContext(CountryPopUpContext);
   const { sportPopUp, setSportPopUp } = useContext(SportPopUpContext);
-  console.log(sportPopUp);
+  const { leagues, setLeagues } = useContext(AllLeaguesContext);
+
+  console.log(leagues);
   console.log(countryPopUp);
+  countryPopUp
+    ? useEffect(() => {
+        fetch(
+          `https://www.thesportsdb.com/api/v1/json/60130162/search_all_leagues.php?c=${countryPopUp}`
+        )
+          .then((res) => res.json())
+          .then((leaguesData) => setLeagues(leaguesData))
+          .catch((err) => console.log("noch keine Daten", err));
+      }, [countryPopUp])
+    : "";
   return (
     <>
       <Header />
@@ -34,7 +50,15 @@ const Home = () => {
           </div>
         </div>
         <div className="container_output_wrapper">
-          <Filter />
+          {countryPopUp ? (
+            leagues ? (
+              <Filter data={leagues} />
+            ) : (
+              ""
+            )
+          ) : (
+            <Filter data={allLeagues} />
+          )}
         </div>
       </section>
     </>
