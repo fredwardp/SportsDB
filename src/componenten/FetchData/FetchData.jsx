@@ -16,7 +16,9 @@ const FetchData = () => {
   const { countryPopUp, setCountryPopUp } = useContext(CountryPopUpContext);
 
   useEffect(() => {
-    fetch(`https://www.thesportsdb.com/api/v1/json/3/search_all_teams.php?l=`)
+    fetch(
+      `https://www.thesportsdb.com/api/v1/json/60130162/search_all_teams.php?l=`
+    )
       .then((res) => res.json())
       .then((teamsData) => setTeams(teamsData.teams))
       .catch((err) => console.log("Noch keine Daten", err));

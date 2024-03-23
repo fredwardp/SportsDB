@@ -1,8 +1,6 @@
 .detailLeagueHeader {
     display: flex;
-    font-family: "Montserrat";
     padding-top: 100px;
-
     position: relative;
     min-height: 100svh;
 }
