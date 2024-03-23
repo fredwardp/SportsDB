@@ -4,30 +4,44 @@ import { useEffect, useState } from "react";
 import "@fontsource/montserrat/600.css";
 import countries from "../../assets/Data/Countries";
 import sports from "../../assets/Data/AllSports";
+import ScrollUp from "../../componenten/ScrollUp/ScrollUp";
 
 const DetailLeague = () => {
     const [myLeague, setMyLeague] = useState();
+    const [myTeamDetail, setMyTeamDetail] = useState();
 
     const { id } = useParams();
 
+    const myAPIKey = "60130162";
     // erstelle string der Länder aus countries
     const countryNames = countries.map((country) => country.name_en).join(", ");
     // erstelle array aus countryNames
     const countryNamesArray = countryNames.split(", ");
-
+    let x = "English%20Premier%20League";
     useEffect(() => {
-        fetch("https://www.thesportsdb.com/api/v1/json/3/search_all_teams.php?l=EFL%20Trophy")
+        fetch("https://www.thesportsdb.com/api/v1/json/3/search_all_teams.php?l=English%20Premier%20League")
             .then((res) => res.json())
             .then((leagueData) => setMyLeague(leagueData))
             .catch((error) => console.log("An error has occured", error));
     }, []);
-    console.log(myLeague);
+
+    useEffect(() => {
+        fetch(`https://www.thesportsdb.com/api/v1/json/${myAPIKey}/lookup_all_players.php?id=133601`)
+            .then((res) => res.json())
+            .then((data) => setMyTeamDetail(data))
+            .catch((error) => console.log("An error has occured", error));
+    }, []);
+
+    // console.log(myLeague);
+    // console.log(myTeamDetail);
     // // erstelle kopie von sports array
     // const mySportsArray = [...sports];
     // // entferne die leerzeichen
     // const newMySportsArray = mySportsArray.map((e) => {
     //     return e.data.replace(" ", "").toLowerCase();
     // });
+
+    myTeamDetail ? console.log(myTeamDetail) : console.log("No Data found");
 
     let detailLeagueImageSource = "";
     let sportVar = "";
@@ -37,7 +51,8 @@ const DetailLeague = () => {
 
     return (
         <>
-            <div className="container">
+            <ScrollUp />
+            <div className="container montserrat">
                 <header className="detailLeagueHeader">
                     <div className="headerContainerLeft">
                         <img src={`/img/detail-league/${detailLeagueImageSource}.jpg`} alt="" className="detailLeagueHeaderImage" />
