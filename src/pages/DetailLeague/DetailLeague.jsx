@@ -51,7 +51,6 @@ const DetailLeague = () => {
 
     return (
         <>
-            <ScrollUp />
             <div className="container montserrat">
                 <header className="detailLeagueHeader">
                     <div className="headerContainerLeft">
