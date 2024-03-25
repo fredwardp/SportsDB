@@ -5,7 +5,8 @@
 .team-name {
   position: absolute;
   top: 20%;
-  left: 20%;
+  left: 50%;
+  transform: translateX(-50%);
   color: var(--red);
   display: flex;
   font-size: 96px;
@@ -54,6 +55,7 @@
 }
 
 .detail-text {
+  color: var(--red);
   font-size: 18px;
   text-transform: uppercase;
   margin-bottom: 50px;
