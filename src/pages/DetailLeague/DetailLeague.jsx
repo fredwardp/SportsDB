@@ -25,7 +25,7 @@ const DetailLeague = () => {
             .catch((error) => console.log("An error has occured", error));
     }, []);
 
-    console.log(myLeague.teams.strLeague);
+    console.log();
 
     myTeamDetail ? console.log(myTeamDetail) : console.log("No Data found");
 
