@@ -17,6 +17,7 @@ const HomeFilterPopUp = ({ func }) => {
         {func === "c" ? (
           <>
             <svg
+              className="close_cross"
               style={{ cursor: "pointer" }}
               onClick={() => {
                 setCountryPopUp(""), setCountriesFilterOpen("");
@@ -26,17 +27,16 @@ const HomeFilterPopUp = ({ func }) => {
               viewBox="0 0 16 16"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              stroke="var(--white)"
             >
               <path
                 d="M2 2L14 14"
-                stroke="var(--white)"
                 strokeWidth="2"
                 strokeLinecap="square"
                 strokeLinejoin="round"
               />
               <path
                 d="M14 2L2 14"
-                stroke="var(--white)"
                 strokeWidth="2"
                 strokeLinecap="square"
                 strokeLinejoin="round"
@@ -51,6 +51,7 @@ const HomeFilterPopUp = ({ func }) => {
         {func === "a" ? (
           <>
             <svg
+              className="close_cross"
               style={{ cursor: "pointer" }}
               onClick={() => {
                 setSportPopUp(""), setSportsFilterOpen("");
@@ -60,17 +61,16 @@ const HomeFilterPopUp = ({ func }) => {
               viewBox="0 0 16 16"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              stroke="var(--white)"
             >
               <path
                 d="M2 2L14 14"
-                stroke="var(--white)"
                 strokeWidth="2"
                 strokeLinecap="square"
                 strokeLinejoin="round"
               />
               <path
                 d="M14 2L2 14"
-                stroke="var(--white)"
                 strokeWidth="2"
                 strokeLinecap="square"
                 strokeLinejoin="round"

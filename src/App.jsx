@@ -19,6 +19,7 @@ import DetailPlayer from "./pages/DetailPlayer/DetailPlayer";
 import Nav from "./componenten/Nav/Nav";
 import Footer from "./componenten/Footer/Footer";
 import ScrollUp from "./componenten/ScrollUp/ScrollUp";
+import CustomScrollBar from "./componenten/CustomScrollBar/CustomScrollBar";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -51,13 +52,23 @@ const App = () => {
                     <LoadingContext.Provider value={{ loading, setLoading }}>
                       {loading ? (
                         <BrowserRouter>
+                          {/* <CustomScrollBar /> */}
                           <ScrollUp />
                           <Nav />
                           <Routes>
                             <Route path="/" element={<Home />} />
-                            <Route path="/detailleague/:id" element={<DetailLeague />}/>
-                            <Route path="/detailteams/:teamName" element={<DetailTeam/>} />
-                            <Route path="/detailplayer/:id" element={<DetailPlayer />}/>
+                            <Route
+                              path="/detailleague/:id"
+                              element={<DetailLeague />}
+                            />
+                            <Route
+                              path="/detailteams/:teamName"
+                              element={<DetailTeam />}
+                            />
+                            <Route
+                              path="/detailplayer/:id"
+                              element={<DetailPlayer />}
+                            />
                           </Routes>
                           <Footer />
                         </BrowserRouter>

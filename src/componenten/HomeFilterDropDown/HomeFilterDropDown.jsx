@@ -24,7 +24,7 @@ const HomeFilterDropDown = ({ name, data, func }) => {
   return (
     <div className="filter_dropdown">
       <p>{name}</p>
-      {countriesFilterOpen ? (
+      {func === "c" && countriesFilterOpen ? (
         <svg
           style={{ cursor: "pointer" }}
           onClick={() =>
