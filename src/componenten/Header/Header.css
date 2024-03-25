@@ -6,13 +6,14 @@
   width: 80%;
 }
 .header-text {
-  font-size: 136px;
+  display: block;
+  font-size: 9em;
   width: 12ch;
   text-align: right;
   font-family: "Montserrat";
-  font-weight: 700;
+  font-weight: bolder;
   position: absolute;
-  top: 350px;
+  top: 300px;
   right: 3.35vw;
   color: var(--red);
   line-height: 168px;
