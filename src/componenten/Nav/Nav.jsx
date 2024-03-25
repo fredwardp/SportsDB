@@ -11,10 +11,12 @@ const Nav = () => {
   const { searchValue, setSearchValue } = useContext(SearchValueContext);
   console.log(searchValue);
 
+  const searchFunction = () => {};
+
   return (
     <nav className="navLeiste">
       <div>
-        <Link to={`/`}>
+        <Link to={"/"}>
           <svg width="169" height="33" viewBox="0 0 169 33" fill="none">
             <path
               style={{ fill: "var(--white)" }}
@@ -28,21 +30,29 @@ const Nav = () => {
         </Link>
       </div>
       <div className="search-box">
-        <button className="btn-search">
-          <svg
-            className="feather feather-search"
-            fill="none"
-            height="24"
-            style={{ stroke: "var(--white)" }}
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="11" cy="11" r="8" />
-            <line x1="21" x2="16.65" y1="21" y2="16.65" />
-          </svg>
-        </button>
-        <input type="text" className="input-search" placeholder="Suche..." />
+        <Link to={`/detailplayer/${searchValue}`}>
+          <button className="btn-search">
+            <svg
+              className="feather feather-search"
+              fill="none"
+              height="24"
+              style={{ stroke: "var(--white)" }}
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" x2="16.65" y1="21" y2="16.65" />
+            </svg>
+          </button>
+        </Link>
+        <input
+          type="text"
+          onChange={(event) => setSearchValue(event.target.value)}
+          value={searchValue}
+          className="input-search"
+          placeholder="Suche..."
+        />
         <DarkMode />
       </div>
     </nav>

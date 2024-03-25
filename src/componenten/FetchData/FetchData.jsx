@@ -7,6 +7,7 @@ import {
   AllPlayersContext,
   AllTeamsContext,
   CountryPopUpContext,
+  SearchValueContext,
 } from "../../context/context";
 
 const FetchData = () => {
@@ -15,6 +16,7 @@ const FetchData = () => {
   const { teams, setTeams } = useContext(AllTeamsContext);
   const { players, setPlayers } = useContext(AllPlayersContext);
   const { countryPopUp, setCountryPopUp } = useContext(CountryPopUpContext);
+  const { searchValue, setSearchValue } = useContext(SearchValueContext);
 
   const { teamName } = useParams();
   console.log("Team Name aus der URL:", teamName);
@@ -47,7 +49,7 @@ const FetchData = () => {
         }
       })
       .catch((err) => console.log("Noch keine Daten", err));
-  }, [searchValue, setPlayers]);
+  }, [players, setPlayers]);
 
   return <></>;
 };
