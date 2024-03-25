@@ -41,9 +41,9 @@ const DetailLeague = () => {
     console.log(detailLeagueImageSource);
     console.log(myLeague);
 
-    function removeUnderscores(league) {
-        return league.replace("_", " ");
-    }
+    // function removeUnderscores(league) {
+    //     return league.replace("_", " ");
+    // }
 
     return (
         <>
@@ -55,8 +55,8 @@ const DetailLeague = () => {
                     <div className="detailLeagueHeaderContainerRight">
                         {myLeague ? (
                             <div className="detailLeagueHeadingContainer">
-                                <h1 className="detailLeagueHeading">{removeUnderscores(myLeague.teams[0].strLeague)}</h1>
-                                <p>{myLeague.teams[0].strSport}</p>
+                                <h1 className="detailLeagueHeading">{myLeague.teams > 0 ? myLeague.teams[0].strLeague : myLeague.teams.strLeague}</h1>
+                                <p>{myLeague.teams > 0 ? myLeague.teams[0].strSport : myLeague.teams.strSport}</p>
                             </div>
                         ) : (
                             <p>Sports</p>

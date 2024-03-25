@@ -30,7 +30,7 @@ const ScrollUp = () => {
             {showBtn && (
                 <svg className="scrollImage" onClick={goToTop} width="72" height="102" viewBox="0 0 72 102" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <mask id="mask0_4824_364" maskUnits="userSpaceOnUse" x="4" y="4" width="64" height="96">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M67.9251 57.1896L35.7688 4L4 57.1895L26.5271 57.1895L26.5271 100H45.8983L45.8983 57.1895L67.9251 57.1896Z" fill="#C4C4C4" />
+                        <path fillRule="evenodd" clipRule="evenodd" d="M67.9251 57.1896L35.7688 4L4 57.1895L26.5271 57.1895L26.5271 100H45.8983L45.8983 57.1895L67.9251 57.1896Z" fill="#C4C4C4" />
                     </mask>
                     <g mask="url(#mask0_4824_364)">
                         <rect width="64" height="1" transform="matrix(1 0 0 -1 4 100)" fill="#E83539" />
@@ -40,12 +40,12 @@ const ScrollUp = () => {
                         fill="#E83539"
                     />
                     <mask id="mask1_4824_364" maskUnits="userSpaceOnUse" x="4" y="4" width="64" height="96">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M67.9251 57.1896L35.7688 4L4 57.1895L26.5271 57.1895L26.5271 100H45.8983L45.8983 57.1895L67.9251 57.1896Z" fill="#FFFDFD" />
+                        <path fillRule="evenodd" clipRule="evenodd" d="M67.9251 57.1896L35.7688 4L4 57.1895L26.5271 57.1895L26.5271 100H45.8983L45.8983 57.1895L67.9251 57.1896Z" fill="#FFFDFD" />
                     </mask>
                     <g mask="url(#mask1_4824_364)">
                         <rect className="rectFillColor" width="64" height="1" transform="matrix(1 0 0 -1 4 100)" fill="#FFFDFD" />
                     </g>
-                    <path className="scrollPath" fill-rule="evenodd" clip-rule="evenodd" d="M67.9624 57.1896L35.8061 4L4.03727 57.1895L26.5644 57.1895L26.5643 100H45.9356L45.9356 57.1895L67.9624 57.1896Z" fill="transparent" />
+                    <path className="scrollPath" fillRule="evenodd" clipRule="evenodd" d="M67.9624 57.1896L35.8061 4L4.03727 57.1895L26.5644 57.1895L26.5643 100H45.9356L45.9356 57.1895L67.9624 57.1896Z" fill="transparent" />
                     <path
                         d="M35.8061 4L37.5176 2.96528L35.7957 0.117051L34.0891 2.97445L35.8061 4ZM67.9624 57.1896L67.9624 59.1896L71.5086 59.1896L69.6739 56.1548L67.9624 57.1896ZM4.03727 57.1895L2.32022 56.164L0.513133 59.1895L4.03727 59.1895L4.03727 57.1895ZM26.5644 57.1895L28.5644 57.1895L28.5644 55.1895L26.5644 55.1895L26.5644 57.1895ZM26.5643 100L24.5643 100L24.5643 102H26.5643V100ZM45.9356 100V102H47.9356L47.9356 100L45.9356 100ZM45.9356 57.1895L45.9356 55.1895L43.9356 55.1895L43.9356 57.1895L45.9356 57.1895ZM34.0946 5.03472L66.2509 58.2243L69.6739 56.1548L37.5176 2.96528L34.0946 5.03472ZM5.75431 58.2151L37.5232 5.02555L34.0891 2.97445L2.32022 56.164L5.75431 58.2151ZM26.5644 55.1895L4.03727 55.1895L4.03727 59.1895L26.5643 59.1895L26.5644 55.1895ZM28.5643 100L28.5644 57.1895L24.5644 57.1895L24.5643 100L28.5643 100ZM45.9356 98H26.5643V102H45.9356V98ZM43.9356 57.1895L43.9356 100L47.9356 100L47.9356 57.1895L43.9356 57.1895ZM67.9624 55.1896L45.9356 55.1895L45.9356 59.1895L67.9624 59.1896L67.9624 55.1896Z"
                         fill="var(--red)"
