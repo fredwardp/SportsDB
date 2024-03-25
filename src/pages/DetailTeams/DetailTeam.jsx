@@ -4,23 +4,26 @@ import { AllTeamsContext } from "../../context/context";
 import { useParams } from "react-router-dom";
 
 const DetailTeam = () => {
-  const { teamName } = useParams();
+  const { teamName } = useParams(); 
   console.log("Team Name aus der URL:", teamName);
-  const { teams } = useContext(AllTeamsContext);
+  
+  const { teams, setTeams } = useContext(AllTeamsContext); 
   const [teamDetail, setTeamDetail] = useState({});
 
   useEffect(() => {
-      console.log(teams);
-      if (Array.isArray(teams) && teams.length > 0) {
-          const selectedTeam = teams.find((team) => team.strTeam === teamName);
-          if (selectedTeam) {
-              setTeamDetail(selectedTeam);
-              console.log("Team Detail:", selectedTeam);
+      fetch(
+        `https://www.thesportsdb.com/api/v1/json/60130162/searchteams.php?t=${teamName}`
+      )
+        .then((res) => res.json())
+        .then((teamsData) => {
+          if (teamsData.teams) {
+            setTeams(teamsData.teams);
           } else {
-              console.log("Kein Team gefunden.");
+            console.log("Keine Teams gefunden");
           }
-      }
-  }, [teamName, teams]);
+        })
+        .catch((err) => console.log("Noch keine Daten", err));
+  }, [teamName, setTeams]);
 
     return (
         <section className="container container-padding">
