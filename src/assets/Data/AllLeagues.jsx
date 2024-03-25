@@ -1111,12 +1111,6 @@ const allLeagues = [
     strLeagueAlternate: "Super Rugby Trans-Tasman",
   },
   {
-    idLeague: "4552",
-    strLeague: "AAF",
-    strSport: "American Football",
-    strLeagueAlternate: "Alliance of American Football",
-  },
-  {
     idLeague: "4553",
     strLeague: "LPGA Tour",
     strSport: "Golf",
@@ -1163,12 +1157,6 @@ const allLeagues = [
     strLeague: "International Friendlies",
     strSport: "Soccer",
     strLeagueAlternate: "Friendlies",
-  },
-  {
-    idLeague: "4563",
-    strLeague: "AEW",
-    strSport: "Fighting",
-    strLeagueAlternate: "All Elite Wrestling",
   },
   {
     idLeague: "4564",
@@ -2979,12 +2967,6 @@ const allLeagues = [
     strLeague: "Top Rank",
     strSport: "Fighting",
     strLeagueAlternate: "Top Rank Boxing",
-  },
-  {
-    idLeague: "4876",
-    strLeague: "AJKF",
-    strSport: "Fighting",
-    strLeagueAlternate: "All Japan Kickboxing Federation",
   },
   {
     idLeague: "4878",
