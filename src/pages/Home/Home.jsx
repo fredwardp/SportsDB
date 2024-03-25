@@ -33,7 +33,6 @@ const Home = () => {
   return (
     <>
       <Header />
-
       <section className="container filter_section">
         <div className="filter_spcbtw">
           <div className="filter_popup_wrapper">

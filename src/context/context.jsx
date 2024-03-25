@@ -7,3 +7,5 @@ export const AllPlayersContext = createContext();
 export const SearchValueContext = createContext();
 export const CountryPopUpContext = createContext();
 export const SportPopUpContext = createContext();
+export const CountriesFilterOpenContext = createContext();
+export const SportsFilterOpenContext = createContext();

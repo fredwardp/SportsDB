@@ -11,5 +11,9 @@ const sports = [
   { data: "American Football" },
   { data: "Golf" },
   { data: "ESports" },
+  { data: "WaterSports" },
+  { data: "Skiing" },
+  { data: "Skating" },
+  { data: "Skating" },
 ];
 export default sports;

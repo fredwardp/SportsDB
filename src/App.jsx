@@ -11,6 +11,8 @@ import {
   SearchValueContext,
   SportPopUpContext,
   CountryPopUpContext,
+  CountriesFilterOpenContext,
+  SportsFilterOpenContext,
 } from "./context/context";
 import LoadingScreen from "./componenten/LoadingScreen/LoadingScreen";
 import DetailPlayer from "./pages/DetailPlayer/DetailPlayer";
@@ -26,46 +28,60 @@ const App = () => {
   const [searchValue, setSearchValue] = useState();
   const [countryPopUp, setCountryPopUp] = useState();
   const [sportPopUp, setSportPopUp] = useState();
+  const [countriesFilterOpen, setCountriesFilterOpen] = useState(false);
+  const [sportsFilterOpen, setSportsFilterOpen] = useState(false);
 
   return (
-    <SportPopUpContext.Provider value={{ sportPopUp, setSportPopUp }}>
-      <CountryPopUpContext.Provider value={{ countryPopUp, setCountryPopUp }}>
-        <SearchValueContext.Provider value={{ searchValue, setSearchValue }}>
-          <AllPlayersContext.Provider value={{ players, setPlayers }}>
-            <AllTeamsContext.Provider value={{ teams, setTeams }}>
-              <AllLeaguesContext.Provider value={{ leagues, setLeagues }}>
-                <LoadingContext.Provider value={{ loading, setLoading }}>
-                  {loading ? (
-                    <BrowserRouter>
-                      <ScrollUp />
-                      <Nav />
-                      <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route
-                          path="/detailleague/:id"
-                          element={<DetailLeague />}
-                        />
-                        <Route
-                          path="/detailteams/:id"
-                          element={<DetailTeam />}
-                        />
-                        <Route
-                          path="/detailplayer/:id"
-                          element={<DetailPlayer />}
-                        />
-                      </Routes>
-                      <Footer />
-                    </BrowserRouter>
-                  ) : (
-                    <LoadingScreen />
-                  )}
-                </LoadingContext.Provider>
-              </AllLeaguesContext.Provider>
-            </AllTeamsContext.Provider>
-          </AllPlayersContext.Provider>
-        </SearchValueContext.Provider>
-      </CountryPopUpContext.Provider>
-    </SportPopUpContext.Provider>
+    <SportsFilterOpenContext.Provider
+      value={{ sportsFilterOpen, setSportsFilterOpen }}
+    >
+      <CountriesFilterOpenContext.Provider
+        value={{ countriesFilterOpen, setCountriesFilterOpen }}
+      >
+        <SportPopUpContext.Provider value={{ sportPopUp, setSportPopUp }}>
+          <CountryPopUpContext.Provider
+            value={{ countryPopUp, setCountryPopUp }}
+          >
+            <SearchValueContext.Provider
+              value={{ searchValue, setSearchValue }}
+            >
+              <AllPlayersContext.Provider value={{ players, setPlayers }}>
+                <AllTeamsContext.Provider value={{ teams, setTeams }}>
+                  <AllLeaguesContext.Provider value={{ leagues, setLeagues }}>
+                    <LoadingContext.Provider value={{ loading, setLoading }}>
+                      {loading ? (
+                        <BrowserRouter>
+                          <ScrollUp />
+                          <Nav />
+                          <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route
+                              path="/detailleague/:id"
+                              element={<DetailLeague />}
+                            />
+                            <Route
+                              path="/detailteams/:id"
+                              element={<DetailTeam />}
+                            />
+                            <Route
+                              path="/detailplayer/:id"
+                              element={<DetailPlayer />}
+                            />
+                          </Routes>
+                          <Footer />
+                        </BrowserRouter>
+                      ) : (
+                        <LoadingScreen />
+                      )}
+                    </LoadingContext.Provider>
+                  </AllLeaguesContext.Provider>
+                </AllTeamsContext.Provider>
+              </AllPlayersContext.Provider>
+            </SearchValueContext.Provider>
+          </CountryPopUpContext.Provider>
+        </SportPopUpContext.Provider>
+      </CountriesFilterOpenContext.Provider>
+    </SportsFilterOpenContext.Provider>
   );
 };
 

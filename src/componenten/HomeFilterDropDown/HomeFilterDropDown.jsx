@@ -1,22 +1,42 @@
-import dropDownImg from "/img/dropdown.svg";
-import dropDownTurnedImg from "/img/dropdown_turned.svg";
-import crossImg from "/img/cross.svg";
 import { useContext, useState } from "react";
-import { CountryPopUpContext, SportPopUpContext } from "../../context/context";
+import {
+  CountriesFilterOpenContext,
+  CountryPopUpContext,
+  SportPopUpContext,
+  SportsFilterOpenContext,
+} from "../../context/context";
 
 const HomeFilterDropDown = ({ name, data, func }) => {
   const [countryCross, setCountryCross] = useState("");
   const [filterOpen, setFilterOpen] = useState(false);
   const { countryPopUp, setCountryPopUp } = useContext(CountryPopUpContext);
   const { sportPopUp, setSportPopUp } = useContext(SportPopUpContext);
+  const { countriesFilterOpen, setCountriesFilterOpen } = useContext(
+    CountriesFilterOpenContext
+  );
+  const { sportsFilterOpen, setSportsFilterOpen } = useContext(
+    SportsFilterOpenContext
+  );
+
+  // func === "c"
+  //   ? setFilterOpen(countriesFilterOpen)
+  //   : setFilterOpen(sportsFilterOpen);
 
   return (
     <div className="filter_dropdown">
       <p>{name}</p>
-      {filterOpen ? (
+      {countriesFilterOpen ? (
         <svg
           style={{ cursor: "pointer" }}
-          onClick={() => setFilterOpen((filterOpen) => !filterOpen)}
+          onClick={() =>
+            func === "c"
+              ? (setCountriesFilterOpen(
+                  (countriesFilterOpen) => !countriesFilterOpen
+                ),
+                setSportsFilterOpen(false))
+              : (setSportsFilterOpen((sportsFilterOpen) => !sportsFilterOpen),
+                setCountriesFilterOpen(false))
+          }
           width="17"
           height="15"
           viewBox="0 0 17 15"
@@ -44,7 +64,15 @@ const HomeFilterDropDown = ({ name, data, func }) => {
       ) : (
         <svg
           style={{ cursor: "pointer" }}
-          onClick={() => setFilterOpen((filterOpen) => !filterOpen)}
+          onClick={() =>
+            func === "c"
+              ? (setCountriesFilterOpen(
+                  (countriesFilterOpen) => !countriesFilterOpen
+                ),
+                setSportsFilterOpen(false))
+              : (setSportsFilterOpen((sportsFilterOpen) => !sportsFilterOpen),
+                setCountriesFilterOpen(false))
+          }
           width="17"
           height="15"
           viewBox="0 0 17 15"
@@ -66,7 +94,17 @@ const HomeFilterDropDown = ({ name, data, func }) => {
         </svg>
       )}
 
-      <div className={`dropdown_popup ${filterOpen ? "" : "dspl_none"}`}>
+      <div
+        className={`dropdown_popup ${
+          func === "c"
+            ? countriesFilterOpen
+              ? ""
+              : "dspl_none"
+            : sportsFilterOpen
+            ? ""
+            : "dspl_none"
+        }`}
+      >
         {data.map((item, index) => (
           <div
             style={{ cursor: "pointer" }}
