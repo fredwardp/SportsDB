@@ -29,32 +29,33 @@ const Nav = () => {
           </svg>
         </Link>
       </div>
-      <div className="search-box">
-        <Link to={`/detailplayer/${searchValue}`}>
-          <button className="btn-search">
-            <svg
-              className="feather feather-search"
-              fill="none"
-              height="24"
-              style={{ stroke: "var(--white)" }}
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="11" cy="11" r="8" />
-              <line x1="21" x2="16.65" y1="21" y2="16.65" />
-            </svg>
-          </button>
-        </Link>
+
+      <div className="search-bar">
         <input
           type="text"
           onChange={(event) => setSearchValue(event.target.value)}
           value={searchValue}
-          className="input-search"
+          className="textbox"
           placeholder="Suche..."
         />
-        <DarkMode />
+        <Link to={`/detailplayer/${searchValue}`}>
+          <a class="search-btn">
+            <svg
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            >
+              <path
+                d="M4 .755l14.374 11.245-14.374 11.219.619.781 15.381-12-15.391-12-.609.755z"
+                style={{ fill: "var(--red)" }}
+              />
+            </svg>
+          </a>
+        </Link>
       </div>
+      <DarkMode />
     </nav>
   );
 };
