@@ -1,3 +1,4 @@
+import { useParams } from "react-router-dom";
 import {
   LoadingContext,
   AllCountriesContext,
@@ -16,22 +17,31 @@ const FetchData = () => {
   const { countryPopUp, setCountryPopUp } = useContext(CountryPopUpContext);
 
   useEffect(() => {
+    const { teamName } = useParams();
+    console.log("Team Name aus der URL:", teamName);
+
     fetch(
-      `https://www.thesportsdb.com/api/v1/json/60130162/search_all_teams.php?l=`
+      `https://www.thesportsdb.com/api/v1/json/60130162/searchteams.php?t=${teamName}`
     )
       .then((res) => res.json())
-      .then((teamsData) => setTeams(teamsData.teams))
+      .then((teamsData) => {
+        if (teamsData.teams) {
+          setTeams(teamsData.teams);
+        } else {
+          console.log("Keine Teams gefunden");
+        }
+      })
       .catch((err) => console.log("Noch keine Daten", err));
   }, []);
 
-  // useEffect(() => {
-  //   fetch(
-  //     `www.thesportsdb.com/api/v1/json/3/searchplayers.php?p=${playerData.players}`
-  //   )
-  //     .then((res) => res.json())
-  //     .then((playerData) => setPlayers(playerData))
-  //     .catch((err) => console.log("noch keine Daten", err));
-  // }, []);
+  useEffect(() => {
+    fetch(
+      `www.thesportsdb.com/api/v1/json/searchplayers.php?t={strTeam}&p={Playername}`
+    )
+      .then((res) => res.json())
+      .then((playerData) => setPlayers(playerData.strTeam))
+      .catch((err) => console.log("noch keine Daten", err));
+  }, []);
 
   return <></>;
 };

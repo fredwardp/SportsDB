@@ -39,6 +39,7 @@ const DetailLeague = () => {
 
     console.log(sportImageSourcePath);
     console.log(detailLeagueImageSource);
+    console.log(myLeague);
 
     function removeUnderscores(league) {
         return league.replace("_", " ");
@@ -81,7 +82,7 @@ const DetailLeague = () => {
 
                             return (
                                 <div className="detailLeagueInnerOutput" key={element.idTeam}>
-                                    <Link className="detailLeagueLink" to={`/detailteams/${element.idTeam}`}>
+                                    <Link className="detailLeagueLink" to={`/detailteams/${element.strTeam}`}>
                                         <p className="detailLeaguePTag1">{element.strTeam}</p>
                                     </Link>
                                     <p className="detailLeaguePTag2">{stadiumLocation}</p>

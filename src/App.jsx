@@ -55,18 +55,9 @@ const App = () => {
                           <Nav />
                           <Routes>
                             <Route path="/" element={<Home />} />
-                            <Route
-                              path="/detailleague/:id"
-                              element={<DetailLeague />}
-                            />
-                            <Route
-                              path="/detailteams/:id"
-                              element={<DetailTeam />}
-                            />
-                            <Route
-                              path="/detailplayer/:id"
-                              element={<DetailPlayer />}
-                            />
+                            <Route path="/detailleague/:id" element={<DetailLeague />}/>
+                            <Route path="/detailteams/:teamName" component={<DetailTeam/>} />
+                            <Route path="/detailplayer/:id" element={<DetailPlayer />}/>
                           </Routes>
                           <Footer />
                         </BrowserRouter>
