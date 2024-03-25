@@ -1,3 +1,7 @@
 .darkmode_div {
-  max-width: 20px;
+    max-width: 20px;
+}
+
+.darkmode_div svg {
+    fill: var(--white);
 }
