@@ -20,7 +20,9 @@ const FetchData = () => {
   console.log("Team Name aus der URL:", teamName);
 
   useEffect(() => {
-    fetch(`https://www.thesportsdb.com/api/v1/json/60130162/searchteams.php?t=${teamName}`)
+    fetch(
+      `https://www.thesportsdb.com/api/v1/json/60130162/searchteams.php?t=${teamName}`
+    )
       .then((res) => res.json())
       .then((teamsData) => {
         if (teamsData.teams) {
