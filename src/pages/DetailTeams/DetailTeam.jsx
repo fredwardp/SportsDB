@@ -4,25 +4,23 @@ import { AllTeamsContext } from "../../context/context";
 import { useParams } from "react-router-dom";
 
 const DetailTeam = () => {
-    const { id } = useParams();
-    console.log("ID DER URL:", id);
-    const { teams } = useContext(AllTeamsContext);
-    const [teamDetail, setTeamDetail] = useState({});
+  const { teamName } = useParams(); // Ändern Sie 'id' zu 'teamName'
+  console.log("Team Name aus der URL:", teamName);
+  const { teams } = useContext(AllTeamsContext);
+  const [teamDetail, setTeamDetail] = useState({});
 
-    useEffect(() => {
-        console.log(teams);
-        if (Array.isArray(teams) && teams.length > 0) {
-            console.log("test");
-            const selectedTeam = teams.find((team) => team.idTeam === id);
-            console.log("test2");
-            if (selectedTeam) {
-                setTeamDetail(selectedTeam);
-                console.log("Team Detail:", selectedTeam);
-            } else {
-                console.log("Kein Team gefunden.");
-            }
-        }
-    }, [id, teams]);
+  useEffect(() => {
+      console.log(teams);
+      if (Array.isArray(teams) && teams.length > 0) {
+          const selectedTeam = teams.find((team) => team.strTeam === teamName); // Ändern Sie 'idTeam' zu 'strTeam'
+          if (selectedTeam) {
+              setTeamDetail(selectedTeam);
+              console.log("Team Detail:", selectedTeam);
+          } else {
+              console.log("Kein Team gefunden.");
+          }
+      }
+  }, [teamName, teams]);
 
     return (
         <section className="container container-padding">
