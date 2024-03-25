@@ -19,7 +19,6 @@ import DetailPlayer from "./pages/DetailPlayer/DetailPlayer";
 import Nav from "./componenten/Nav/Nav";
 import Footer from "./componenten/Footer/Footer";
 import ScrollUp from "./componenten/ScrollUp/ScrollUp";
-import CustomScrollBar from "./componenten/CustomScrollBar/CustomScrollBar";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -52,7 +51,6 @@ const App = () => {
                     <LoadingContext.Provider value={{ loading, setLoading }}>
                       {loading ? (
                         <BrowserRouter>
-                          {/* <CustomScrollBar /> */}
                           <ScrollUp />
                           <Nav />
                           <Routes>
