@@ -4,6 +4,7 @@ import { AllPlayersContext, SearchValueContext } from "../../context/context";
 import { useContext } from "react";
 import FetchData from "../FetchData/FetchData";
 import DarkMode from "../DarkMode/DarkMode";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const { players, setPlayers } = useContext(AllPlayersContext);
@@ -13,7 +14,7 @@ const Nav = () => {
   return (
     <nav className="navLeiste">
       <div>
-        <a href="/">
+        <Link to={`/Home`}>
           <svg width="169" height="33" viewBox="0 0 169 33" fill="none">
             <path
               style={{ fill: "var(--white)" }}
@@ -24,7 +25,7 @@ const Nav = () => {
               style={{ fill: "var(--red)" }}
             />
           </svg>
-        </a>
+        </Link>
       </div>
       <div className="search-box">
         <button className="btn-search">
