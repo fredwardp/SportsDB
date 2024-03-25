@@ -8,7 +8,9 @@ const Header = () => {
           <img src="public/img/header-img.png" alt="" />
         </div>
         <div>
-          <p className="header-text">FIND YOUR LEAGUE</p>
+          <h1 className="header-text">
+            FIND YOUR <br /> LEAGUE
+          </h1>
         </div>
       </header>
     </section>

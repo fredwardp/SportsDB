@@ -3,10 +3,9 @@
   align-items: center;
   margin: 30px 0;
   font-family: Montserrat;
+  cursor: pointer;
 }
-.navLeiste div:nth-of-type(1) p {
-  margin-left: -135px;
-}
+
 .navLeiste {
   display: flex;
   justify-content: center;
