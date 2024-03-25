@@ -24,12 +24,14 @@ const FetchData = () => {
       .catch((err) => console.log("Noch keine Daten", err));
   }, []);
 
-  //   useEffect(() => {
-  //     fetch(`www.thesportsdb.com/api/v1/json/3/searchplayers.php?p=${p}`)
-  //       .then((res) => res.json())
-  //       .then((playerData) => setPlayers(playerData))
-  //       .catch((err) => console.log("noch keine Daten", err));
-  //   }, []);
+  // useEffect(() => {
+  //   fetch(
+  //     `www.thesportsdb.com/api/v1/json/3/searchplayers.php?p=${playerData.players}`
+  //   )
+  //     .then((res) => res.json())
+  //     .then((playerData) => setPlayers(playerData))
+  //     .catch((err) => console.log("noch keine Daten", err));
+  // }, []);
 
   return <></>;
 };
