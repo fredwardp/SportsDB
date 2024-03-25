@@ -56,7 +56,7 @@ const App = () => {
                           <Routes>
                             <Route path="/" element={<Home />} />
                             <Route path="/detailleague/:id" element={<DetailLeague />}/>
-                            <Route path="/detailteams/:teamName" component={<DetailTeam/>} />
+                            <Route path="/detailteams/:teamName" element={<DetailTeam/>} />
                             <Route path="/detailplayer/:id" element={<DetailPlayer />}/>
                           </Routes>
                           <Footer />
