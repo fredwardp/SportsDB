@@ -23,13 +23,16 @@
     right: 50px;
     top: 150px;
     color: var(--red);
-    font-size: 5rem;
+    /* font-size: 3rem; */
+    font-size: clamp(1rem, 0.4545rem + 2.9091vw, 5rem);
+
     text-align: right;
 }
 
 .detailLeagueHeading {
     color: var(--red);
     text-transform: uppercase;
+    max-width: 800px;
 }
 
 .detailLeagueInnerOutput {
@@ -43,12 +46,12 @@
 }
 
 .detailLeaguePTag1 {
-    font-size: 2rem;
+    font-size: clamp(1rem, 0.5909rem + 2.1818vw, 4rem);
 }
 
 .detailLeaguePTag1:hover {
     transition: 300ms;
-    font-size: 2.5rem;
+    font-size: clamp(1rem, 0.4545rem + 2.9091vw, 5rem);
     cursor: pointer;
 }
 

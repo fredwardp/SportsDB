@@ -1,14 +1,14 @@
 import "./DetailLeague.css";
-import { NavLink, useParams, Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import "@fontsource/montserrat/600.css";
 import countries from "../../assets/Data/Countries";
-import sports from "../../assets/Data/AllSports";
-import ScrollUp from "../../componenten/ScrollUp/ScrollUp";
+import AllSportsImage from "../../assets/Data/AllSportsImage";
 
 const DetailLeague = () => {
     const [myLeague, setMyLeague] = useState();
     const [myTeamDetail, setMyTeamDetail] = useState();
+
+    const sportImageSourcePath = AllSportsImage();
 
     const { id } = useParams();
 
@@ -17,65 +17,68 @@ const DetailLeague = () => {
     const countryNames = countries.map((country) => country.name_en).join(", ");
     // erstelle array aus countryNames
     const countryNamesArray = countryNames.split(", ");
-    let x = "English%20Premier%20League";
+    let fixedLeague = "English%20Premier%20League";
     useEffect(() => {
-        fetch("https://www.thesportsdb.com/api/v1/json/3/search_all_teams.php?l=English%20Premier%20League")
+        fetch(`https://www.thesportsdb.com/api/v1/json/3/search_all_teams.php?l=${id}`)
             .then((res) => res.json())
             .then((leagueData) => setMyLeague(leagueData))
             .catch((error) => console.log("An error has occured", error));
     }, []);
 
-    useEffect(() => {
-        fetch(`https://www.thesportsdb.com/api/v1/json/${myAPIKey}/lookup_all_players.php?id=133601`)
-            .then((res) => res.json())
-            .then((data) => setMyTeamDetail(data))
-            .catch((error) => console.log("An error has occured", error));
-    }, []);
-
-    // console.log(myLeague);
-    // console.log(myTeamDetail);
-    // // erstelle kopie von sports array
-    // const mySportsArray = [...sports];
-    // // entferne die leerzeichen
-    // const newMySportsArray = mySportsArray.map((e) => {
-    //     return e.data.replace(" ", "").toLowerCase();
-    // });
+    console.log(myLeague);
 
     myTeamDetail ? console.log(myTeamDetail) : console.log("No Data found");
 
     let detailLeagueImageSource = "";
     let sportVar = "";
-    myLeague ? (sportVar = myLeague.teams[0].strSport.toLowerCase()) : "";
+    if (myLeague && myLeague.teams.length > 0) {
+        sportVar = myLeague.teams[0].strSport;
+        const sportImage = sportImageSourcePath.find((sport) => sport.strSport === sportVar);
+        detailLeagueImageSource = sportImage ? sportImage.strSportThumb : "public/img/detail-league/sports.jpg";
+    }
 
-    sportVar ? (detailLeagueImageSource = sportVar) : (detailLeagueImageSource = "sports");
+    console.log(sportImageSourcePath);
+    console.log(detailLeagueImageSource);
+
+    function removeUnderscores(league) {
+        return league.replace("_", " ");
+    }
 
     return (
         <>
             <div className="container montserrat">
                 <header className="detailLeagueHeader">
                     <div className="headerContainerLeft">
-                        <img src={`/img/detail-league/${detailLeagueImageSource}.jpg`} alt="" className="detailLeagueHeaderImage" />
+                        <img src={detailLeagueImageSource} alt="sports image" className="detailLeagueHeaderImage" />
                     </div>
                     <div className="detailLeagueHeaderContainerRight">
-                        <div className="detailLeagueHeadingContainer">
-                            <h1 className="detailLeagueHeading">
-                                English <br />
-                                Premier <br /> League
-                            </h1>
-                            <p>soccer</p>
-                        </div>
+                        {myLeague ? (
+                            <div className="detailLeagueHeadingContainer">
+                                <h1 className="detailLeagueHeading">{removeUnderscores(myLeague.teams[0].strLeague)}</h1>
+                                <p>{myLeague.teams[0].strSport}</p>
+                            </div>
+                        ) : (
+                            <p>Sports</p>
+                        )}
                     </div>
                 </header>
                 {myLeague ? (
                     <div className="">
                         {myLeague.teams.map((element) => {
-                            //hier wird das Land aus element.strStadiumLocation entfernt
+                            // hier wird das Land aus element.strStadiumLocation entfernt
                             let stadiumLocation = element.strStadiumLocation;
-                            countryNamesArray.forEach((country) => {
-                                if (stadiumLocation.includes(country)) {
-                                    stadiumLocation = stadiumLocation.replace(country, "");
-                                }
-                            });
+                            {
+                                stadiumLocation ? (
+                                    countryNamesArray.forEach((country) => {
+                                        if (stadiumLocation.includes(country)) {
+                                            stadiumLocation = stadiumLocation.replace(country, "");
+                                        }
+                                    })
+                                ) : (
+                                    <p>"not listed</p>
+                                );
+                            }
+
                             return (
                                 <div className="detailLeagueInnerOutput" key={element.idTeam}>
                                     <Link className="detailLeagueLink" to={`/detailteams/${element.idTeam}`}>
