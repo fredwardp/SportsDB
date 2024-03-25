@@ -25,18 +25,20 @@ const DetailTeam = () => {
         .catch((err) => console.log("Noch keine Daten", err));
   }, [teamName, setTeams]);
 
+  console.log(teams);
+
     return (
         <section className="container container-padding">
-            <h1 className="team-name montserrat">{teamDetail.strTeam}</h1>
+            <h1 className="team-name montserrat">{teams[0].strTeam}</h1>
             <div className="header-flex">
                 <div className="team-infos">
-                    <p className="detail-headline montserrat">{teamDetail.strCountry}</p>
+                    <p className="detail-headline montserrat">{teams[0].strCountry}</p>
                     <p className="detail-text opensans">Country</p>
-                    <p className="detail-headline montserrat">{teamDetail.strStadiumLocation}</p>
+                    <p className="detail-headline montserrat">{teams[0].strStadiumLocation}</p>
                     <p className="detail-text opensans">Location</p>
-                    <p className="detail-headline montserrat">{teamDetail.intFormedYear}</p>
+                    <p className="detail-headline montserrat">{teams[0].intFormedYear}</p>
                     <p className="detail-text opensans">Established</p>
-                    <p className="detail-headline montserrat">{teamDetail.strSport}</p>
+                    <p className="detail-headline montserrat">{teams[0].strSport}</p>
                     <p className="detail-text opensans">Sport</p>
                 </div>
                 <div className="team-img">
@@ -48,11 +50,11 @@ const DetailTeam = () => {
                     <p className="detail-text">COMPETITION</p>
                 </div>
                 <div>
-                    <p className="detail-comp-text">{teamDetail.strLeague}</p> <br />
-                    <p className="detail-comp-text">{teamDetail.strLeague2}</p> <br />
-                    <p className="detail-comp-text">{teamDetail.strLeague3}</p> <br />
-                    <p className="detail-comp-text">{teamDetail.strLeague4}</p> <br />
-                    <p className="detail-comp-text">{teamDetail.strLeague5}</p> <br />
+                    <p className="detail-comp-text">{teams[0].strLeague}</p> <br />
+                    <p className="detail-comp-text">{teams[0].strLeague2}</p> <br />
+                    <p className="detail-comp-text">{teams[0].strLeague3}</p> <br />
+                    <p className="detail-comp-text">{teams[0].strLeague4}</p> <br />
+                    <p className="detail-comp-text">{teams[0].strLeague5}</p> <br />
                 </div>
             </div>
             <div className="desc">
@@ -60,38 +62,38 @@ const DetailTeam = () => {
                     <h2 className="desc-title montserrat">DESCRIPTION</h2>
                 </div>
                 <div className="desc-text">
-                    <p className="opensans">{teamDetail.strDescriptionEN}</p>
+                    <p className="opensans">{teams[0].strDescriptionEN}</p>
                 </div>
             </div>
             <div className="logo-container">
-                <img className="team-logo" src={teamDetail.strTeamBadge} alt="CLUB LOGO" />
+                <img className="team-logo" src={teams[0].strTeamBadge} alt="CLUB LOGO" />
             </div>
             <h3 className="stadiumtitle opensans">STADIUM</h3>
             <section className="bottompage">
                 <div className="stadium opensans">
-                    <p>{teamDetail.strStadiumDescription}</p>
+                    <p>{teams[0].strStadiumDescription}</p>
                 </div>
                 <div className="info1 opensans">
-                    <p className="info1-title">{teamDetail.strStadium}</p>
+                    <p className="info1-title">{teams[0].strStadium}</p>
                     <p className="info1-info">Home</p>
-                    <p className="info1-title">{teamDetail.intStadiumCapacity}</p>
+                    <p className="info1-title">{teams[0].intStadiumCapacity}</p>
                     <p className="info1-info">Capacity</p>
                 </div>
             </section>
             <div className="socials opensans">
-                <a className="opensans" href={teamDetail.strWebsite}>
+                <a className="opensans" href={teams[0].strWebsite}>
                     WEBSITE
                 </a>
-                <a className="opensans" href={teamDetail.strFacebook}>
+                <a className="opensans" href={teams[0].strFacebook}>
                     FACEBOOK
                 </a>
-                <a className="opensans" href={teamDetail.strTwitter}>
+                <a className="opensans" href={teams[0].strTwitter}>
                     TWITTER
                 </a>
-                <a className="opensans" href={teamDetail.strInstagram}>
+                <a className="opensans" href={teams[0].strInstagram}>
                     INSTAGRAM
                 </a>
-                <a className="opensans" href={teamDetail.strYoutube}>
+                <a className="opensans" href={teams[0].strYoutube}>
                     YOUTUBE
                 </a>
             </div>
