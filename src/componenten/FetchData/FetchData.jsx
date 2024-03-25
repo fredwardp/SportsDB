@@ -16,11 +16,20 @@ const FetchData = () => {
   const { countryPopUp, setCountryPopUp } = useContext(CountryPopUpContext);
 
   useEffect(() => {
+    const { teamName } = useParams();
+    console.log("Team Name aus der URL:", teamName);
+
     fetch(
-      `https://www.thesportsdb.com/api/v1/json/60130162/search_all_teams.php?l=`
+      `https://www.thesportsdb.com/api/v1/json/60130162/searchteams.php?t=${teamName}`
     )
       .then((res) => res.json())
-      .then((teamsData) => setTeams(teamsData.teams))
+      .then((teamsData) => {
+        if (teamsData.teams) {
+          setTeams(teamsData.teams);
+        } else {
+          console.log("Keine Teams gefunden");
+        }
+      })
       .catch((err) => console.log("Noch keine Daten", err));
   }, []);
 
