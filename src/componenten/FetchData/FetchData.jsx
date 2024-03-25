@@ -36,7 +36,7 @@ const FetchData = () => {
 
   useEffect(() => {
     fetch(
-      `https://www.thesportsdb.com/api/v1/json/searchplayers.php?t=${teamName}&p={Playername}`
+      `www.thesportsdb.com/api/v1/json/60130162/searchplayers.php?p=${searchValue}`
     )
       .then((res) => res.json())
       .then((playerData) => {
@@ -47,7 +47,7 @@ const FetchData = () => {
         }
       })
       .catch((err) => console.log("Noch keine Daten", err));
-  }, [teamName, setPlayers]);
+  }, [searchValue, setPlayers]);
 
   return <></>;
 };
