@@ -8,9 +8,8 @@ import {
 
 const HomeFilterDropDown = ({ name, data, func }) => {
   const [countryCross, setCountryCross] = useState("");
-  const [filterOpen, setFilterOpen] = useState(false);
-  const { countryPopUp, setCountryPopUp } = useContext(CountryPopUpContext);
-  const { sportPopUp, setSportPopUp } = useContext(SportPopUpContext);
+  const { setCountryPopUp } = useContext(CountryPopUpContext);
+  const { setSportPopUp } = useContext(SportPopUpContext);
   const { countriesFilterOpen, setCountriesFilterOpen } = useContext(
     CountriesFilterOpenContext
   );
@@ -25,7 +24,7 @@ const HomeFilterDropDown = ({ name, data, func }) => {
   return (
     <div className="filter_dropdown">
       <p>{name}</p>
-      {countriesFilterOpen ? (
+      {func === "c" && countriesFilterOpen ? (
         <svg
           style={{ cursor: "pointer" }}
           onClick={() =>

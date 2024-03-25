@@ -7,6 +7,7 @@ import {
   AllPlayersContext,
   AllTeamsContext,
   CountryPopUpContext,
+  SearchValueContext,
 } from "../../context/context";
 
 const FetchData = () => {
@@ -15,12 +16,15 @@ const FetchData = () => {
   const { teams, setTeams } = useContext(AllTeamsContext);
   const { players, setPlayers } = useContext(AllPlayersContext);
   const { countryPopUp, setCountryPopUp } = useContext(CountryPopUpContext);
+  const { searchValue, setSearchValue } = useContext(SearchValueContext);
 
   const { teamName } = useParams();
   console.log("Team Name aus der URL:", teamName);
 
   useEffect(() => {
-    fetch(`https://www.thesportsdb.com/api/v1/json/60130162/searchteams.php?t=${teamName}`)
+    fetch(
+      `https://www.thesportsdb.com/api/v1/json/60130162/searchteams.php?t=${teamName}`
+    )
       .then((res) => res.json())
       .then((teamsData) => {
         if (teamsData.teams) {
@@ -34,7 +38,7 @@ const FetchData = () => {
 
   useEffect(() => {
     fetch(
-      `https://www.thesportsdb.com/api/v1/json/searchplayers.php?t=${teamName}&p={Playername}`
+      `www.thesportsdb.com/api/v1/json/60130162/searchplayers.php?p=${searchValue}`
     )
       .then((res) => res.json())
       .then((playerData) => {
@@ -45,7 +49,7 @@ const FetchData = () => {
         }
       })
       .catch((err) => console.log("Noch keine Daten", err));
-  }, [teamName, setPlayers]);
+  }, [players, setPlayers]);
 
   return <></>;
 };
