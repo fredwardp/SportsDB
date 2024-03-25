@@ -9,12 +9,8 @@ import {
 const HomeFilterPopUp = ({ func }) => {
   const { countryPopUp, setCountryPopUp } = useContext(CountryPopUpContext);
   const { sportPopUp, setSportPopUp } = useContext(SportPopUpContext);
-  const { countriesFilterOpen, setCountriesFilterOpen } = useContext(
-    CountriesFilterOpenContext
-  );
-  const { sportsFilterOpen, setSportsFilterOpen } = useContext(
-    SportsFilterOpenContext
-  );
+  const { setCountriesFilterOpen } = useContext(CountriesFilterOpenContext);
+  const { setSportsFilterOpen } = useContext(SportsFilterOpenContext);
   return (
     <>
       <div className="filter_popup">

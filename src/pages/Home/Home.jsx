@@ -14,12 +14,10 @@ import Filter from "../../componenten/Filter/Filter";
 import allLeagues from "../../assets/Data/AllLeagues";
 
 const Home = () => {
-  const { countryPopUp, setCountryPopUp } = useContext(CountryPopUpContext);
-  const { sportPopUp, setSportPopUp } = useContext(SportPopUpContext);
+  const { countryPopUp } = useContext(CountryPopUpContext);
+  const { sportPopUp } = useContext(SportPopUpContext);
   const { leagues, setLeagues } = useContext(AllLeaguesContext);
 
-  console.log(leagues);
-  console.log(countryPopUp);
   countryPopUp
     ? useEffect(() => {
         fetch(
