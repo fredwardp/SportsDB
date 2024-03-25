@@ -1,5 +1,5 @@
 import "./Home.css";
-import { useContext, useState, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import countries from "../../assets/Data/Countries";
 import sports from "../../assets/Data/AllSports";
 import HomeFilterDropDown from "../../componenten/HomeFilterDropDown/HomeFilterDropDown";
