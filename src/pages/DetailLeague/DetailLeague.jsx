@@ -25,7 +25,7 @@ const DetailLeague = () => {
             .catch((error) => console.log("An error has occured", error));
     }, []);
 
-    console.log(myLeague);
+    console.log(myLeague.teams.strLeague);
 
     myTeamDetail ? console.log(myTeamDetail) : console.log("No Data found");
 
@@ -55,8 +55,10 @@ const DetailLeague = () => {
                     <div className="detailLeagueHeaderContainerRight">
                         {myLeague ? (
                             <div className="detailLeagueHeadingContainer">
-                                <h1 className="detailLeagueHeading">{myLeague.teams > 0 ? myLeague.teams[0].strLeague : myLeague.teams.strLeague}</h1>
-                                <p>{myLeague.teams > 0 ? myLeague.teams[0].strSport : myLeague.teams.strSport}</p>
+                                {/* <h1 className="detailLeagueHeading">{myLeague?.teams[0]?.strLeague}</h1> */}
+                                <h1 className="detailLeagueHeading">{myLeague.teams[0] ? myLeague.teams[0].strLeague : myLeague.teams.strLeague}</h1>
+                                {/* <p>{myLeague.teams[0].strSport}</p> */}
+                                <p>{myLeague.teams[0] ? myLeague.teams[0].strSport : myLeague.teams.strSport}</p>
                             </div>
                         ) : (
                             <p>Sports</p>

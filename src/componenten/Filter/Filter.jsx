@@ -1,19 +1,11 @@
 import "./Filter.css";
-import { useEffect, useState, useContext } from "react";
-import countries from "../../assets/Data/Countries";
-import allLeagues from "../../assets/Data/AllLeagues";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
-import {
-  CountryPopUpContext,
-  SportPopUpContext,
-  AllLeaguesContext,
-} from "../../context/context";
+import { SportPopUpContext, AllLeaguesContext } from "../../context/context";
 
 const Filter = ({ data }) => {
-  const { countryPopUp, setCountryPopUp } = useContext(CountryPopUpContext);
-  const { sportPopUp, setSportPopUp } = useContext(SportPopUpContext);
-  const [countryData, setCountryData] = useState();
-  const { leagues, setLeagues } = useContext(AllLeaguesContext);
+  const { sportPopUp } = useContext(SportPopUpContext);
+  const { leagues } = useContext(AllLeaguesContext);
 
   // sortieren aller Liegen in dem Array nach dem Anfangsbuchstaben der Ligen
   let sortedLeagues = "";
@@ -35,7 +27,6 @@ const Filter = ({ data }) => {
   } else {
     sortedSport = [...sortedLeagues]; // Copying all elements
   }
-  console.log(sortedSport);
 
   // erstellen eines leeren Objects in dem später alle Liegen mit dem gleichen Anfangsbuchstaben zusammen in ein Objekt sollen
   const groupedLeagues = {};

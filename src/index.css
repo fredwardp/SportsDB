@@ -33,3 +33,32 @@ video {
   padding-inline: 3.35vw;
   background-color: var(--black);
 }
+
+/* body::-webkit-scrollbar {
+  display: none;
+} */
+/* width */
+::-webkit-scrollbar {
+  /* width: 30px; */
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--black);
+  border-left: 1px solid rgba(255, 255, 255, 0.068);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(132, 132, 132, 0.25);
+  border-radius: 6px;
+  /* background-size: 25px; */
+  height: 50px;
+  transition: all 0.4s ease;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--red);
+  transition: all 0.4s ease;
+}

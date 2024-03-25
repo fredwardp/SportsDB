@@ -35,7 +35,7 @@
   border: 4px solid var(--white);
   padding: 8px 12px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: clamp(0.9375rem, 0.8839rem + 0.2679vw, 1.3125rem); /* 18px */
   width: 300px;
   position: relative;
   display: flex;
@@ -56,6 +56,7 @@
   overflow-y: scroll;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  background-color: var(--black);
 }
 
 .dropdown_popup::-webkit-scrollbar {
@@ -87,5 +88,13 @@
 }
 
 .container_output_wrapper {
-  padding-bottom: 50vh;
+  padding-bottom: 50px;
+}
+
+.close_cross {
+  transition: all 0.3s ease;
+}
+
+.close_cross:hover {
+  stroke: var(--red);
 }

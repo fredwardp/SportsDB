@@ -1,0 +1,68 @@
+.scrollbar {
+  width: 10px;
+  background-color: var(--black);
+  height: 100svh;
+  position: fixed;
+  left: 0;
+  z-index: 4;
+}
+
+.scrollbar_inner {
+  position: absolute;
+  top: 0;
+  background: linear-gradient(var(--black), var(--red)),
+    url(../../../public/img/fire_ball.svg);
+  /* scale: 1 0; */
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform-origin: top;
+  height: 100%;
+  width: 100%;
+  z-index: 9998;
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 20px;
+
+  animation: newscrollbar linear;
+  animation-timeline: scroll();
+}
+
+@keyframes newscrollbar {
+  from {
+    scale: 1 0;
+    opacity: 0.1;
+  }
+  to {
+    scale: 1 1;
+    opacity: 0.6;
+  }
+}
+
+.fire_ball {
+  position: absolute;
+  bottom: -10px;
+  z-index: 19999;
+  height: max-content;
+}
+
+.tor {
+  position: absolute;
+  top: 0;
+  right: -5px;
+  z-index: 10000;
+  width: 150%;
+  max-width: unset;
+  height: max-content;
+  opacity: 0.4;
+}
+
+.tor_bottom {
+  position: absolute;
+  bottom: 0;
+  right: -5px;
+  width: 150%;
+  max-width: unset;
+  height: max-content;
+  opacity: 0.4;
+  z-index: -1;
+}

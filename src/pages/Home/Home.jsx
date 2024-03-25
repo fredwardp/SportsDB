@@ -1,5 +1,5 @@
 import "./Home.css";
-import { useContext, useState, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import countries from "../../assets/Data/Countries";
 import sports from "../../assets/Data/AllSports";
 import HomeFilterDropDown from "../../componenten/HomeFilterDropDown/HomeFilterDropDown";
@@ -12,14 +12,13 @@ import HomeFilterPopUp from "../../componenten/HomeFilterPopUp/HomeFilterPopUp";
 import Header from "../../componenten/Header/Header";
 import Filter from "../../componenten/Filter/Filter";
 import allLeagues from "../../assets/Data/AllLeagues";
+import CustomScrollBar from "../../componenten/CustomScrollBar/CustomScrollBar";
 
 const Home = () => {
-  const { countryPopUp, setCountryPopUp } = useContext(CountryPopUpContext);
-  const { sportPopUp, setSportPopUp } = useContext(SportPopUpContext);
+  const { countryPopUp } = useContext(CountryPopUpContext);
+  const { sportPopUp } = useContext(SportPopUpContext);
   const { leagues, setLeagues } = useContext(AllLeaguesContext);
 
-  console.log(leagues);
-  console.log(countryPopUp);
   countryPopUp
     ? useEffect(() => {
         fetch(
