@@ -4,13 +4,24 @@ import { AllPlayersContext, SearchValueContext } from "../../context/context";
 import { useContext } from "react";
 import FetchData from "../FetchData/FetchData";
 import DarkMode from "../DarkMode/DarkMode";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Nav = () => {
   const { players, setPlayers } = useContext(AllPlayersContext);
   const { searchValue, setSearchValue } = useContext(SearchValueContext);
 
-  const searchFunction = () => {};
+  let navigate = useNavigate();
+  const searchFunction = () => {
+    if (searchValue) {
+      navigate(`/detailplayer/${searchValue}`);
+    }
+  };
+
+  const searchEnter = () => {
+    if (event.key === "Enter" && searchValue != "") {
+      navigate(`/detailplayer/${searchValue}`);
+    }
+  };
 
   return (
     <nav className="navLeiste">
@@ -31,16 +42,14 @@ const Nav = () => {
       <div className="nav-wrapper">
         <div className="search-box">
           <input
+            onKeyPress={searchEnter}
             type="text"
             onChange={(event) => setSearchValue(event.target.value)}
             value={searchValue}
             className="input-search"
             placeholder="Suche..."
           />
-          <Link
-            to={`/detailplayer/${searchValue}`}
-            onClick={() => setSearchValue("")}
-          >
+          <div onClick={searchFunction}>
             <a class="search-btn">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +65,7 @@ const Nav = () => {
                 ></path>
               </svg>
             </a>
-          </Link>
+          </div>
         </div>
         <DarkMode />
       </div>
