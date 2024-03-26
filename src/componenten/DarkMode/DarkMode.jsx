@@ -9,23 +9,42 @@ import paperBlue from "../../../public/img/color_icons/paper_blue.svg";
 
 const DarkMode = () => {
   const [toggle, setToggle] = useState(false);
+  const [colorSelect, setColorSelect] = useState(0);
 
-  const darkLightSwitch = () => {
-    // setToggle((toggle) => !toggle);
-    if (toggle === true) {
-      document.documentElement.style.setProperty("--black", "#0f0f0f");
-      document.documentElement.style.setProperty("--red", "#e83539");
-      document.documentElement.style.setProperty("--white", "#ffffff");
-      // document.body.classList.add("dark-mode");
-    } else {
-      document.documentElement.style.setProperty("--black", "#EDECE7");
-      document.documentElement.style.setProperty("--red", "#4550B4");
-      document.documentElement.style.setProperty("--white", "#15132D");
-      // document.body.classList.remove("dark-mode");
-    }
-  };
+  if (colorSelect === 1) {
+    document.documentElement.style.setProperty("--black", "#0f0f0f");
+    document.documentElement.style.setProperty("--red", "#e83539");
+    document.documentElement.style.setProperty("--white", "#ffffff");
+    // document.body.classList.add("dark-mode");
+  } else if (colorSelect === 2) {
+    document.documentElement.style.setProperty("--black", "#EDECE7");
+    document.documentElement.style.setProperty("--red", "#4550B4");
+    document.documentElement.style.setProperty("--white", "#15132D");
+    // document.body.classList.remove("dark-mode");
+  } else if (colorSelect === 3) {
+    document.documentElement.style.setProperty("--black", "#0F5E4B");
+    document.documentElement.style.setProperty("--red", "#77EBD6");
+    document.documentElement.style.setProperty("--white", "#EDEDED");
+    // document.body.classList.remove("dark-mode");
+  } else if (colorSelect === 4) {
+    document.documentElement.style.setProperty("--black", "#161611");
+    document.documentElement.style.setProperty("--red", "#EEDC3C");
+    document.documentElement.style.setProperty("--white", "#EDEDED");
+    // document.body.classList.remove("dark-mode");
+  } else if (colorSelect === 5) {
+    document.documentElement.style.setProperty("--black", "#112845");
+    document.documentElement.style.setProperty("--red", "#DB0007");
+    document.documentElement.style.setProperty("--white", "#EDEDED");
+    // document.body.classList.remove("dark-mode");
+  } else if (colorSelect === 6) {
+    document.documentElement.style.setProperty("--black", "#FFE9B0");
+    document.documentElement.style.setProperty("--red", "#FF6D2F");
+    document.documentElement.style.setProperty("--white", "#111010");
+    // document.body.classList.remove("dark-mode");
+  }
 
   console.log(toggle);
+  console.log(colorSelect);
 
   return (
     <div
@@ -33,17 +52,16 @@ const DarkMode = () => {
       onClick={() => setToggle((toggle) => !toggle)}
     >
       <div className={`${toggle ? "color_none" : ""} color_modes `}>
-        <img src={blackRed} alt="" />
-        <img src={paperBlue} alt="" />
-        <img src={greenTürkis} alt="" />
-        <img src={blackYellow} alt="" />
-        <img src={blueRed} alt="" />
-        <img src={fruityOrange} alt="" />
+        <img onClick={() => setColorSelect(1)} src={blackRed} alt="" />
+        <img onClick={() => setColorSelect(2)} src={paperBlue} alt="" />
+        <img onClick={() => setColorSelect(3)} src={greenTürkis} alt="" />
+        <img onClick={() => setColorSelect(4)} src={blackYellow} alt="" />
+        <img onClick={() => setColorSelect(5)} src={blueRed} alt="" />
+        <img onClick={() => setColorSelect(6)} src={fruityOrange} alt="" />
       </div>
       {/* <img src={darkMode} onClick={darkLightSwitch} alt="" /> */}
       <svg
         onHove
-        onClick={darkLightSwitch}
         width="20px"
         height="20px"
         viewBox="0 0 24 24"
