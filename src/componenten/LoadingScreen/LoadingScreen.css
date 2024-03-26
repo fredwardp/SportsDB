@@ -11,3 +11,9 @@
 .loading-anim img {
   background-color: #333333;
 }
+
+.loading-title {
+  color: var(--red);
+  font-size: 48px;
+  font-weight: 600;
+}
