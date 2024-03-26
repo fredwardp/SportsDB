@@ -1,0 +1,57 @@
+body {
+  background-color: var(--black);
+}
+
+.big-title-changelog {
+  color: var(--red);
+  font-size: 96px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 150px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+  width: 50%;
+  font-weight: 800;
+}
+
+.update-balken {
+  height: 3px;
+  width: 50%;
+  margin-left: 50px;
+  background: linear-gradient(to right, var(--red), rgba(255, 138, 0, 0));
+  margin-bottom: 50px;
+}
+
+.big-title-update {
+  color: var(--red);
+  font-size: 96px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 150px;
+  margin-left: 50px;
+  width: 50%;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.change-card {
+  margin-left: 50px;
+}
+
+.update-card {
+  margin-left: 50px;
+}
+
+.change-title {
+  color: var(--red);
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.change-text {
+  margin-bottom: 25px;
+  width: 50%;
+  font-weight: 500;
+}

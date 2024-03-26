@@ -10,6 +10,7 @@ import Nav from "./componenten/Nav/Nav";
 import Footer from "./componenten/Footer/Footer";
 import ScrollUp from "./componenten/ScrollUp/ScrollUp";
 import ScrollToTop from "./componenten/ScrollToTop/ScrollToTop";
+import Update from "./pages/Update/Update";
 
 const App = () => {
     const [loading, setLoading] = useState(false);
@@ -42,6 +43,7 @@ const App = () => {
                                                         <Route path="/detailleague/:id" element={<DetailLeague />} />
                                                         <Route path="/detailteams/:teamName" element={<DetailTeam />} />
                                                         <Route path="/detailplayer/:id" element={<DetailPlayer />} />
+                                                        <Route path="/update" element={<Update />} />
                                                     </Routes>
                                                     <Footer />
                                                 </BrowserRouter>
