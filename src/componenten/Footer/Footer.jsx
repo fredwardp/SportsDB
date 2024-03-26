@@ -8,12 +8,12 @@ const Footer = () => {
             <p className="footerParagraph">&copy; {year} Sports Database</p>
             <div className="footerLinkBox">
                 <div className="footerInnerBox">
-                    <Link to={"https://github.com/fredwardp"}>Fred vom Jupiter</Link>
-                    <Link to={"https://github.com/SonoraDE"}>Tobel Hobel</Link>
+                    <Link to={"https://github.com/fredwardp"}>fredwardp</Link>
+                    <Link to={"https://github.com/SonoraDE"}>SonoraDE</Link>
                 </div>
                 <div className="footerInnerBox">
-                    <Link to={"https://github.com/Hkndevit"}>Hakan Kanka</Link>
-                    <Link to={"https://github.com/MichaelGee76"}>Mike the Mechanic</Link>
+                    <Link to={"https://github.com/Hkndevit"}>Hkndevit</Link>
+                    <Link to={"https://github.com/MichaelGee76"}>MichaelGee76</Link>
                 </div>
             </div>
         </footer>

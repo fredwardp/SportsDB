@@ -3,6 +3,7 @@
     padding-top: 100px;
     position: relative;
     min-height: 100svh;
+    overflow: hidden;
 }
 
 .detailLeagueHeaderImage {
@@ -109,6 +110,7 @@
 @media screen and (max-width: 768px) {
     .detailLeagueOuterBox {
         padding-bottom: 2rem;
+        overflow: hidden;
     }
     .detailLeagueInnerOutput {
         display: flex;
@@ -129,9 +131,16 @@
     .detailLeagueHeaderImage {
         padding-top: 50px;
         padding-bottom: 50px;
+        padding-left: 0;
     }
 
     .detailLeagueHeading {
         padding-top: 50px;
+    }
+    .detailLeaguePTag2 {
+        max-width: 30ch;
+    }
+    .detailLeaguePTag1 {
+        max-width: 20ch;
     }
 }

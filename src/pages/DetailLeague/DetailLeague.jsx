@@ -49,9 +49,13 @@ const DetailLeague = () => {
             {myLeague ? (
                 <div className="container montserrat detailLeagueOuterBox">
                     <header className="detailLeagueHeader">
-                        <div className="headerContainerLeft">
-                            <img src={detailLeagueImageSource} alt="sports image" className="detailLeagueHeaderImage" />
-                        </div>
+                        {myLeague.teams !== null ? (
+                            <div className="headerContainerLeft">
+                                <img src={detailLeagueImageSource} alt="sports image" className="detailLeagueHeaderImage" />
+                            </div>
+                        ) : (
+                            <p></p>
+                        )}
                         <div className="detailLeagueHeaderContainerRight">
                             {myLeague.teams !== null ? (
                                 <div className="detailLeagueHeadingContainer">
@@ -93,7 +97,7 @@ const DetailLeague = () => {
                             })}
                         </div>
                     ) : (
-                        <h2 className="errorMessage">No Data Found</h2>
+                        <h2 className="errorMessage"></h2>
                     )}
                 </div>
             ) : (
