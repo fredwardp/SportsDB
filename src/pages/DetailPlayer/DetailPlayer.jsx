@@ -38,8 +38,8 @@ const DetailPlayer = () => {
     <section className="container container-padding">
       {players && players.length > 0 ? (
         <>
-          <h1 className="player-name montserrat">{players[0]?.strPlayer}</h1>
-          <div className="header-flex">
+          <h1 className="player-name ">{players[0]?.strPlayer}</h1>
+          <div className="header-flex player-flex">
             <div className="player-infos">
               {players[0]?.strNationality && (
                 <>

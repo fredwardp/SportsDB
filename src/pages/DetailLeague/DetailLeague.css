@@ -11,6 +11,7 @@
   padding-left: 10vw;
   object-fit: cover;
   filter: grayscale(1);
+  animation: fade-up 0.6s;
 }
 
 .detailLeagueHeaderImage:hover {
@@ -25,7 +26,7 @@
   color: var(--red);
   /* font-size: 3rem; */
   font-size: clamp(1rem, 0.4545rem + 2.9091vw, 5rem);
-
+  animation: fade-up 0.9s;
   text-align: right;
 }
 
