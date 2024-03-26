@@ -11,6 +11,7 @@
   font-weight: 900;
   -webkit-text-stroke: 4px var(--red);
   color: transparent;
+
   position: absolute;
   top: -110px;
 }
@@ -59,8 +60,13 @@
   }
 
   @keyframes fade-in {
-    to {
+    0% {
+      opacity: 0.2;
+      transform: translateY(30px) scale(0.94);
+    }
+    100% {
       opacity: 1;
+      transform: translateY(0px) scale(1);
     }
   }
 }

@@ -1,31 +1,41 @@
 .container-padding {
   padding-top: 100px;
+  position: relative;
 }
 
 .team-name {
   position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
+  font-family: Montserrat-bold;
+  top: 200px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(-50%);
+  max-width: 12ch;
   color: var(--red);
   display: flex;
   font-size: 96px;
   font-weight: bold;
-  text-shadow: 0px 0px 10px var(--red);
+  text-shadow: 0px 0px 5px var(--red);
   z-index: 2;
+  text-align: center;
 }
 
 .comp {
   display: flex;
   justify-content: right;
-  margin-right: 350px;
+
   gap: 100px;
   margin-top: 100px;
+  width: max-content;
+  margin-inline: auto;
+  padding-left: 195px;
 }
 
 .header-flex {
   display: flex;
   justify-content: center;
+  align-items: flex-end;
   gap: 200px;
 }
 
@@ -45,6 +55,7 @@
   font-size: 36px;
   text-transform: uppercase;
   margin-bottom: 5px;
+  text-align: center;
 }
 
 .detail-comp-text {
@@ -68,6 +79,7 @@
   text-shadow: 0px 0px 1px var(--red);
   filter: drop-shadow(0px 0px 1px var(--red));
   margin-right: -150px;
+  margin-left: -9.5vw;
 }
 
 .desc {
@@ -75,17 +87,18 @@
   justify-content: center;
   align-items: center;
   margin-top: 150px;
-  margin-right: 200px;
+  /* margin-right: 200px; */
   padding-bottom: 150px;
 }
 
 .desc-text {
   font-size: 18px;
+  line-height: 180%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 100px;
-  width: 600px;
+  max-width: 85ch;
 }
 
 .logo-container {
@@ -129,7 +142,8 @@
 }
 
 .stadium p {
-  width: 350px;
+  max-width: 60ch;
+  line-height: 180%;
 }
 
 .stadiumtitle {
@@ -155,4 +169,92 @@
 .socials a {
   text-decoration: none;
   cursor: pointer;
+}
+@media only screen and (max-width: 1303px) {
+  .desc-title {
+    margin-left: -25vw;
+    margin-right: -200px;
+  }
+}
+
+@media only screen and (max-width: 963px) {
+  .header-flex {
+    gap: 140px;
+  }
+  .team-name {
+    font-size: clamp(2.25rem, 0.3837rem + 9.3313vw, 6rem);
+  }
+  .comp {
+    padding-left: 0;
+  }
+  .bottompage {
+    gap: 8vw;
+  }
+}
+
+@media only screen and (max-width: 848px) {
+  .header-flex {
+    gap: 60px;
+  }
+  .detail-headline {
+    font-size: clamp(1.875rem, 1.6477rem + 1.1364vw, 2.25rem);
+  }
+  .comp {
+    flex-direction: column;
+    gap: 0;
+  }
+  .desc {
+    flex-direction: column;
+  }
+  .desc-title {
+    transform: none;
+    font-size: clamp(2rem, 0.3204rem + 8.3981vw, 5.375rem);
+    margin-inline: unset;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .logo-container {
+    margin: unset;
+  }
+  .desc-text {
+    line-height: 200%;
+    font-size: clamp(0.9375rem, 0.8239rem + 0.5682vw, 1.125rem);
+  }
+  .bottompage {
+    flex-direction: column;
+  }
+  .stadiumtitle {
+    margin-right: unset;
+    font-size: clamp(2.5rem, 1.7424rem + 3.7879vw, 3.75rem);
+  }
+  .stadium p {
+    max-width: unset;
+    line-height: 200%;
+    font-size: clamp(0.9375rem, 0.8239rem + 0.5682vw, 1.125rem);
+  }
+  .socials {
+    margin-left: unset;
+  }
+}
+
+@media only screen and (max-width: 555px) {
+  .header-flex {
+    flex-direction: column-reverse;
+    gap: 0;
+    align-items: center;
+    margin-top: 180px;
+  }
+  .team-infos {
+    margin-top: 80px;
+  }
+  .team-name {
+    top: 180px;
+  }
+  .detail-comp-text {
+    font-size: clamp(1.125rem, 0.1037rem + 5.1064vw, 1.875rem);
+    width: unset;
+  }
+  .bottompage {
+    gap: 50px;
+  }
 }

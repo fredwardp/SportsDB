@@ -22,7 +22,6 @@ const countries = [
   { data: "Poland" },
   { data: "Portugal" },
   { data: "Romania" },
-  { data: "Slovakia (Slovak Republic)" },
   { data: "Slovenia" },
   { data: "Spain" },
   { data: "Sweden" },
