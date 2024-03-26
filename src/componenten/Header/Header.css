@@ -57,13 +57,14 @@
     overflow: hidden;
   }
   .header-text {
+    padding-top: 5vw;
     position: unset;
-    margin-bottom: 7vw;
   }
   .header-img {
     padding-right: 0;
     margin-right: -20vw;
     margin-left: -20vw;
+    padding-top: 14vw;
   }
 }
 

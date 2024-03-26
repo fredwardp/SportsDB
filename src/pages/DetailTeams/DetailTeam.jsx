@@ -25,8 +25,6 @@ const DetailTeam = () => {
       .catch((err) => console.log("Noch keine Daten", err));
   }, [teamName, setTeams]);
 
-  console.log(teams);
-
   return (
     <section className="container container-padding">
       {teams?.[0]?.strTeam && (

@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 const Nav = () => {
   const { players, setPlayers } = useContext(AllPlayersContext);
   const { searchValue, setSearchValue } = useContext(SearchValueContext);
-  console.log(searchValue);
 
   const searchFunction = () => {};
 
