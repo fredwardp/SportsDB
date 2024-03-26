@@ -28,7 +28,7 @@
       opacity: 1;
     }
     100% {
-      transform: translateX(-40vw);
+      transform: translateX(-20vw);
       opacity: 0.2;
     }
   }
@@ -64,7 +64,7 @@
     opacity: 1;
   }
   100% {
-    transform: translateX(30vw);
+    transform: translateX(15vw);
     opacity: 0.2;
   }
 }
