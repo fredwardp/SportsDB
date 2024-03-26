@@ -25,8 +25,6 @@ const DetailLeague = () => {
             .catch((error) => console.log("An error has occured", error));
     }, []);
 
-    console.log();
-
     // myTeamDetail ? console.log(myTeamDetail) : console.log("No Data found");
 
     let detailLeagueImageSource = "";
@@ -41,7 +39,6 @@ const DetailLeague = () => {
 
     // console.log(sportImageSourcePath);
     // console.log(detailLeagueImageSource);
-    console.log(myLeague);
 
     // function removeUnderscores(league) {
     //     return league.replace("_", " ");
@@ -87,7 +84,7 @@ const DetailLeague = () => {
 
                                 return (
                                     <div className="detailLeagueInnerOutput" key={element.idTeam}>
-                                        <Link className="detailLeagueLink" key={element.strTeamId} to={`/detailteams/${element.strTeam}`}>
+                                        <Link className="detailLeagueLink" to={`/detailteams/${element.strTeam}`}>
                                             <p className="detailLeaguePTag1">{element.strTeam}</p>
                                         </Link>
                                         <p className="detailLeaguePTag2">{stadiumLocation}</p>
