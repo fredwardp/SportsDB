@@ -62,7 +62,7 @@
   @keyframes fade-in {
     0% {
       opacity: 0.2;
-      transform: translateY(30px) scale(0.94);
+      transform: translateY(30px) scale(0.92);
     }
     100% {
       opacity: 1;
@@ -107,9 +107,7 @@
   /* 48px */
   /* font-size: 48px; */
   font-weight: 600;
-  width: max-content;
-  text-wrap: balance;
-  word-break: break-all;
+  max-width: 40ch;
 }
 
 .filter_sport {

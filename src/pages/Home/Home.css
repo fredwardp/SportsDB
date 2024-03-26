@@ -11,6 +11,7 @@
 .filter_popup_wrapper {
   display: flex;
   gap: 2vw;
+  height: 45.5px;
 }
 
 .filter_popup {
@@ -65,6 +66,7 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   background-color: var(--black);
+  display: none;
 }
 
 .dropdown_popup::-webkit-scrollbar {
@@ -88,7 +90,44 @@
 }
 
 .dspl_none {
+  display: flex;
+  flex-direction: column;
+  animation: popup-open 0.4s ease-in;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+
+.cross_none {
   display: none;
+}
+
+@keyframes popup-open {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade_out {
+  flex-direction: column;
+  animation: popup-close 0.4s ease-in-out forwards;
+}
+
+@keyframes popup-close {
+  0% {
+    display: flex;
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  61% {
+    display: none;
+  }
+  100% {
+    display: none;
+  }
 }
 
 .filter_dropdown div p {
