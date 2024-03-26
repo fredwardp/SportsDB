@@ -9,7 +9,7 @@ const LoadingScreen = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(true);
-    }, 2000);
+    }, 3000);
   }, []);
   return (
     <section>
