@@ -16,7 +16,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .header-img {
-    animation: to-left linear forwards;
+    animation: to-left ease-out forwards;
     animation-timeline: view(y);
     /* animation-range: end; */
     animation-duration: 1ms;
@@ -28,7 +28,7 @@
       opacity: 1;
     }
     100% {
-      transform: translateX(-70vw);
+      transform: translateX(-40vw);
       opacity: 0.2;
     }
   }
@@ -52,7 +52,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .header-text {
-    animation: to-right linear forwards;
+    animation: to-right ease-out forwards;
     animation-timeline: view(y);
     /* animation-range: end; */
     animation-duration: 1ms;
@@ -64,7 +64,7 @@
     opacity: 1;
   }
   100% {
-    transform: translateX(60vw);
+    transform: translateX(30vw);
     opacity: 0.2;
   }
 }
