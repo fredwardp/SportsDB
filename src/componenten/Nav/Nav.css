@@ -95,3 +95,9 @@
   background-color: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
+
+@media only screen and (max-width: 600px) {
+  .navLeiste div:nth-of-type(1) {
+    margin-block: 15px;
+  }
+}

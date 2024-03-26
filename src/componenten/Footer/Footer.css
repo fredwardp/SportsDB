@@ -44,3 +44,24 @@ footer a:hover {
     color: var(--red);
     opacity: 1;
 }
+
+.footerParagraph {
+    margin-bottom: 2rem;
+}
+/* ############### Media Queries ####################### */
+
+@media screen and (max-width: 768px) {
+    .footerParagraph {
+        margin-bottom: 2rem;
+    }
+    .footerLinkBox {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 2rem;
+    }
+
+    .footerInnerBox {
+        display: flex;
+        justify-content: space-between;
+    }
+}

@@ -27,7 +27,7 @@ const DarkMode = () => {
     document.documentElement.style.setProperty("--white", "#EDEDED");
     // document.body.classList.remove("dark-mode");
   } else if (colorSelect === 4) {
-    document.documentElement.style.setProperty("--black", "#161611");
+    document.documentElement.style.setProperty("--black", "#060603");
     document.documentElement.style.setProperty("--red", "#EEDC3C");
     document.documentElement.style.setProperty("--white", "#EDEDED");
     // document.body.classList.remove("dark-mode");
@@ -49,9 +49,10 @@ const DarkMode = () => {
   return (
     <div
       className="darkmode_div"
-      onClick={() => setToggle((toggle) => !toggle)}
+      onMouseEnter={() => setToggle((toggle) => !toggle)}
+      onMouseLeave={() => setToggle((toggle) => !toggle)}
     >
-      <div className={`${toggle ? "color_none" : ""} color_modes `}>
+      <div className={`${toggle ? "color_none" : "fade_out"} color_modes `}>
         <img onClick={() => setColorSelect(1)} src={blackRed} alt="" />
         <img onClick={() => setColorSelect(2)} src={paperBlue} alt="" />
         <img onClick={() => setColorSelect(3)} src={greenTürkis} alt="" />

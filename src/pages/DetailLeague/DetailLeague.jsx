@@ -47,7 +47,7 @@ const DetailLeague = () => {
     return (
         <>
             {myLeague ? (
-                <div className="container montserrat">
+                <div className="container montserrat detailLeagueOuterBox">
                     <header className="detailLeagueHeader">
                         <div className="headerContainerLeft">
                             <img src={detailLeagueImageSource} alt="sports image" className="detailLeagueHeaderImage" />

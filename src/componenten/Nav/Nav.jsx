@@ -14,12 +14,14 @@ const Nav = () => {
   const searchFunction = () => {
     if (searchValue) {
       navigate(`/detailplayer/${searchValue}`);
+      setSearchValue("");
     }
   };
 
   const searchEnter = () => {
     if (event.key === "Enter" && searchValue != "") {
       navigate(`/detailplayer/${searchValue}`);
+      setSearchValue("");
     }
   };
 

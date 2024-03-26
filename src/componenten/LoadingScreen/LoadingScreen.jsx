@@ -4,7 +4,7 @@ import FetchData from "../FetchData/FetchData";
 import "./LoadingScreen.css";
 
 const LoadingScreen = () => {
-  const { loading, setLoading } = useContext(LoadingContext);
+    const { loading, setLoading } = useContext(LoadingContext);
 
   useEffect(() => {
     setTimeout(() => {
