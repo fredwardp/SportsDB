@@ -87,7 +87,7 @@ const DetailLeague = () => {
 
                                 return (
                                     <div className="detailLeagueInnerOutput" key={element.idTeam}>
-                                        <Link className="detailLeagueLink" to={`/detailteams/${element.strTeam}`}>
+                                        <Link className="detailLeagueLink" key={element.strTeamId} to={`/detailteams/${element.strTeam}`}>
                                             <p className="detailLeaguePTag1">{element.strTeam}</p>
                                         </Link>
                                         <p className="detailLeaguePTag2">{stadiumLocation}</p>
