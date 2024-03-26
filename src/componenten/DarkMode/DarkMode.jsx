@@ -1,29 +1,48 @@
 import { useState } from "react";
 import "./DarkMode.css";
-import darkMode from "/public/img/darkmode.svg";
+import blackRed from "../../../public/img/color_icons/black_red.svg";
+import blackYellow from "../../../public/img/color_icons/black_yellow.svg";
+import blueRed from "../../../public/img/color_icons/blue_red.svg";
+import fruityOrange from "../../../public/img/color_icons/fruity_orange.svg";
+import greenTürkis from "../../../public/img/color_icons/green_türkis.svg";
+import paperBlue from "../../../public/img/color_icons/paper_blue.svg";
 
 const DarkMode = () => {
   const [toggle, setToggle] = useState(false);
 
   const darkLightSwitch = () => {
-    setToggle((toggle) => !toggle);
+    // setToggle((toggle) => !toggle);
     if (toggle === true) {
       document.documentElement.style.setProperty("--black", "#0f0f0f");
       document.documentElement.style.setProperty("--red", "#e83539");
       document.documentElement.style.setProperty("--white", "#ffffff");
-      document.body.classList.add("dark-mode");
+      // document.body.classList.add("dark-mode");
     } else {
       document.documentElement.style.setProperty("--black", "#EDECE7");
       document.documentElement.style.setProperty("--red", "#4550B4");
       document.documentElement.style.setProperty("--white", "#15132D");
-      document.body.classList.remove("dark-mode");
+      // document.body.classList.remove("dark-mode");
     }
   };
 
+  console.log(toggle);
+
   return (
-    <div className="darkmode_div">
+    <div
+      className="darkmode_div"
+      onClick={() => setToggle((toggle) => !toggle)}
+    >
+      <div className={`${toggle ? "color_none" : ""} color_modes `}>
+        <img src={blackRed} alt="" />
+        <img src={paperBlue} alt="" />
+        <img src={greenTürkis} alt="" />
+        <img src={blackYellow} alt="" />
+        <img src={blueRed} alt="" />
+        <img src={fruityOrange} alt="" />
+      </div>
       {/* <img src={darkMode} onClick={darkLightSwitch} alt="" /> */}
       <svg
+        onHove
         onClick={darkLightSwitch}
         width="20px"
         height="20px"
