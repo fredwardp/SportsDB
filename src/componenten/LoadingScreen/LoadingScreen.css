@@ -5,7 +5,7 @@
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  background-color: var(--black);
+  background-color: #333333;
 }
 
 .loading-anim img {
