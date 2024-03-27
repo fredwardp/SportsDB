@@ -6,16 +6,16 @@ const Footer = () => {
     return (
         <footer>
             <p className="footerParagraph">&copy; {year} Sports Database</p>
-            <div className="footerLinkBox">
-                <div className="footerInnerBox">
+            <div className="footerLinkBox montserrat">
+                <div className="footerInnerBox montserrat">
                     <Link to={"https://github.com/fredwardp"}>fredwardp</Link>
                     <Link to={"https://github.com/SonoraDE"}>SonoraDE</Link>
                 </div>
-                <div className="footerInnerBox">
+                <div className="footerInnerBox montserrat">
                     <Link to={"https://github.com/Hkndevit"}>Hkndevit</Link>
                     <Link to={"https://github.com/MichaelGee76"}>MichaelGee76</Link>
                 </div>
-                <div className="footerInnerBox">
+                <div className="footerInnerBox2 montserrat">
                     <Link to={"/update"}>Updates</Link>
                 </div>
             </div>

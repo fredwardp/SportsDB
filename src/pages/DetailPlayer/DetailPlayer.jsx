@@ -173,6 +173,12 @@ const DetailPlayer = () => {
               </div>
             </div>
           </div>
+            <div className="fanarts">
+              <img src={players[0]?.strFanart1} alt="Player Thumbnail" />
+              <img src={players[0]?.strFanart2} alt="Player Thumbnail" />
+              <img src={players[0]?.strFanart3} alt="Player Thumbnail" />
+              <img src={players[0]?.strFanart4} alt="Player Thumbnail" />
+          </div>
         </>
       ) : (
         <p>Keine Spieler gefunden</p>

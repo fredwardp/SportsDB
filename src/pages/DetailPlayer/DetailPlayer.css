@@ -69,6 +69,19 @@ div .player-flex {
   margin-top: 50px;
 }
 
+.fanarts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.fanarts img {
+  margin-top: 100px;
+  max-width: 350px;
+  box-shadow: 0px 0px 10px black;
+}
+
 @media only screen and (max-width: 938px) {
   div .player-flex {
     gap: 3vw;
