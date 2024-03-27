@@ -13,6 +13,10 @@
   color: var(--white);
 }
 
+body {
+  overflow-x: hidden;
+}
+
 img,
 svg,
 video {
