@@ -27,7 +27,7 @@ const DarkMode = () => {
     document.documentElement.style.setProperty("--white", "#EDEDED");
     // document.body.classList.remove("dark-mode");
   } else if (colorSelect === 4) {
-    document.documentElement.style.setProperty("--black", "#060603");
+    document.documentElement.style.setProperty("--black", "#0f0f0f");
     document.documentElement.style.setProperty("--red", "#EEDC3C");
     document.documentElement.style.setProperty("--white", "#EDEDED");
     // document.body.classList.remove("dark-mode");
@@ -62,6 +62,7 @@ const DarkMode = () => {
       </div>
       {/* <img src={darkMode} onClick={darkLightSwitch} alt="" /> */}
       <svg
+        style={{ cursor: "pointer" }}
         onHove
         width="20px"
         height="20px"
