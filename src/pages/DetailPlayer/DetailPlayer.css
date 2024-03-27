@@ -102,6 +102,10 @@ div .player-flex {
   align-items: center;
 }
 
+.no_show {
+  display: none;
+}
+
 .show_img {
   width: 80vw;
 }
