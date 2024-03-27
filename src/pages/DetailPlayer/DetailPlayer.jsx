@@ -62,6 +62,7 @@ const DetailPlayer = () => {
           </svg>
         </div>
         <img
+          onClick={() => setImgPopUp("")}
           className={imgPopup ? "show_img" : "no_show"}
           src={imgPopup}
           alt=""
