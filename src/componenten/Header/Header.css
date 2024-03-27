@@ -82,9 +82,11 @@
   .header-text {
     font-size: clamp(3.125rem, 1.3393rem + 8.9286vw, 5.625rem);
     top: 30vw;
+    animation: unset;
   }
   .header-img {
     margin-left: -50vw;
+    animation: unset;
   }
 }
 

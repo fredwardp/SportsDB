@@ -14,6 +14,5 @@ const sports = [
   { data: "WaterSports" },
   { data: "Skiing" },
   { data: "Skating" },
-  { data: "Skating" },
 ];
 export default sports;
