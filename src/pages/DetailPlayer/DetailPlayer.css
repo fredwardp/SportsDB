@@ -71,9 +71,17 @@ div .player-flex {
 
 .fanarts {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 50px;
+  overflow-x: scroll;
+  padding-bottom: 70px;
+  max-width: 1550px;
+  margin-inline: auto;
+}
+
+.fanarts::-webkit-scrollbar {
+  display: none;
 }
 
 .fanarts img {
@@ -107,6 +115,9 @@ div .player-flex {
   .player-socials {
     margin-inline: auto;
     width: max-content;
+  }
+  .fanarts {
+    gap: 6vw;
   }
 }
 
