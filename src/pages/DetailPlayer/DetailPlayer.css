@@ -88,6 +88,29 @@ div .player-flex {
   margin-top: 100px;
   max-width: 350px;
   box-shadow: 0px 0px 10px black;
+  cursor: pointer;
+}
+
+.img_popup {
+  position: fixed;
+  z-index: 10000;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0f0f0f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show_img {
+  width: 80vw;
+}
+
+.img_popup_close {
+  position: absolute;
+  top: 3vw;
+  right: 3vw;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 938px) {
@@ -99,6 +122,13 @@ div .player-flex {
   }
   .player-img img {
     max-width: 60vw;
+  }
+  .show_img {
+    width: 90vw;
+  }
+  .img_popup_close {
+    top: 6vw;
+    right: 6vw;
   }
 }
 
@@ -118,6 +148,10 @@ div .player-flex {
   }
   .fanarts {
     gap: 6vw;
+  }
+  .img_popup_close {
+    top: 30vh;
+    right: 6vw;
   }
 }
 
