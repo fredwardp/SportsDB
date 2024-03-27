@@ -15,6 +15,9 @@ const Footer = () => {
                     <Link to={"https://github.com/Hkndevit"}>Hkndevit</Link>
                     <Link to={"https://github.com/MichaelGee76"}>MichaelGee76</Link>
                 </div>
+                <div className="footerInnerBox">
+                    <Link to={"/update"}>Updates</Link>
+                </div>
             </div>
         </footer>
     );
