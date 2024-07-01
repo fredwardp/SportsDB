@@ -1,10 +1,10 @@
 @font-face {
   font-family: Roboto;
-  src: url(./fonts/Roboto-Black.ttf);
+  src: url(../public/fonts/Roboto-Black.ttf);
 }
 @font-face {
   font-family: Montserrat-bold;
-  src: url(./fonts/Montserrat/static/Montserrat-Bold.ttf);
+  src: url(../public/fonts/Montserrat/static/Montserrat-Bold.ttf);
 }
 * {
   margin: 0;
