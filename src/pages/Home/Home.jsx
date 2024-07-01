@@ -12,7 +12,6 @@ import HomeFilterPopUp from "../../componenten/HomeFilterPopUp/HomeFilterPopUp";
 import Header from "../../componenten/Header/Header";
 import Filter from "../../componenten/Filter/Filter";
 import allLeagues from "../../assets/Data/AllLeagues";
-import CustomScrollBar from "../../componenten/CustomScrollBar/CustomScrollBar";
 
 const Home = () => {
   const { countryPopUp } = useContext(CountryPopUpContext);

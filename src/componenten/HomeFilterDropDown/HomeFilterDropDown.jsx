@@ -16,6 +16,7 @@ const HomeFilterDropDown = ({ name, data, func }) => {
   const { sportsFilterOpen, setSportsFilterOpen } = useContext(
     SportsFilterOpenContext
   );
+  const [localFilterOpen, setLocalFilterOpen] = useState(false);
 
   // func === "c"
   //   ? setFilterOpen(countriesFilterOpen)
@@ -25,39 +26,15 @@ const HomeFilterDropDown = ({ name, data, func }) => {
     <div
       className="filter_dropdown"
       onMouseEnter={() =>
-        func === "c"
-          ? (setCountriesFilterOpen(
-              (countriesFilterOpen) => !countriesFilterOpen
-            ),
-            setSportsFilterOpen(false))
-          : (setSportsFilterOpen((sportsFilterOpen) => !sportsFilterOpen),
-            setCountriesFilterOpen(false))
+        setLocalFilterOpen((localFilterOpen) => !localFilterOpen)
       }
       onMouseLeave={() =>
-        func === "c"
-          ? (setCountriesFilterOpen(
-              (countriesFilterOpen) => !countriesFilterOpen
-            ),
-            setSportsFilterOpen(false))
-          : (setSportsFilterOpen((sportsFilterOpen) => !sportsFilterOpen),
-            setCountriesFilterOpen(false))
+        setLocalFilterOpen((localFilterOpen) => !localFilterOpen)
       }
     >
-      <div
-        className="filter_dropdown_wrapper"
-        style={{ cursor: "pointer" }}
-        // onClick={() =>
-        //   func === "c"
-        //     ? (setCountriesFilterOpen(
-        //         (countriesFilterOpen) => !countriesFilterOpen
-        //       ),
-        //       setSportsFilterOpen(false))
-        //     : (setSportsFilterOpen((sportsFilterOpen) => !sportsFilterOpen),
-        //       setCountriesFilterOpen(false))
-        // }
-      >
+      <div className="filter_dropdown_wrapper" style={{ cursor: "pointer" }}>
         <p>{name}</p>
-        {func === "c" && countriesFilterOpen ? (
+        {localFilterOpen ? (
           <svg
             width="17"
             height="15"
@@ -87,13 +64,7 @@ const HomeFilterDropDown = ({ name, data, func }) => {
           <svg
             style={{ cursor: "pointer" }}
             onClick={() =>
-              func === "c"
-                ? (setCountriesFilterOpen(
-                    (countriesFilterOpen) => !countriesFilterOpen
-                  ),
-                  setSportsFilterOpen(false))
-                : (setSportsFilterOpen((sportsFilterOpen) => !sportsFilterOpen),
-                  setCountriesFilterOpen(false))
+              setLocalFilterOpen((localFilterOpen) => !localFilterOpen)
             }
             width="17"
             height="15"
@@ -119,13 +90,7 @@ const HomeFilterDropDown = ({ name, data, func }) => {
 
       <div
         className={`dropdown_popup ${
-          func === "c"
-            ? countriesFilterOpen
-              ? "dspl_none"
-              : "fade_out"
-            : sportsFilterOpen
-            ? "dspl_none"
-            : "fade_out"
+          localFilterOpen ? "dspl_none" : "fade_out"
         }`}
       >
         {data.map((item, index) => (
