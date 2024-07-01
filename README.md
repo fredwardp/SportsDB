@@ -3,7 +3,7 @@
 SportsDB is a collaborative project developed by a team of four, designed to provide detailed information on clubs, leagues, and players across various popular sports. This application is built using React and leverages a sports API for fetching up-to-date data. Users can filter sports leagues by country and/or specific sport, making it easy to find relevant information.
 
 ## Live Site
-https://sports-db-eta.vercel.app/
+You can check out the live site [here](https://sports-db-eta.vercel.app/).
 
 ## Features
 
