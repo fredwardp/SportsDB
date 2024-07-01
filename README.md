@@ -8,6 +8,7 @@ SportsDB is a collaborative project developed by a team of four, designed to pro
 - **Multicolor Darkmode**: You can choose between several different color designs, fitting your favorite team.
 - **Filtering**: Filter sports leagues by country and specific sport.
 - **Up-to-date Information**: Data is fetched in real-time from a reliable sports API.
+- **Custome Scrollbars**: Custome scrollbars matching the page design
 - **User-friendly Interface**: Intuitive design for seamless navigation and information retrieval.
 
 ## Tech Stack
